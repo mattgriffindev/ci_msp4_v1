@@ -1,5 +1,10 @@
 * {
-	padding: 0;
+	box-sizing: border-box;
+    padding: 0;
+}
+
+html {
+	font-size: 16px;
 }
 
 /*--------------------------------------------------------------------header-*/
@@ -45,6 +50,6 @@
 
 
 .hero-container {
-    height: 100px;
+    height: 30rem;
     background-color: cornflowerblue;
 }

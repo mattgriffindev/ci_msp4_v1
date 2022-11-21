@@ -2,7 +2,21 @@
 {% load static %}
 
 {% block page_header %}
-<div class="container hero-container">
-    
+<div class="container-fluid hero-container">
+
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-6 border bg-danger" style="height: 30rem;">LEFT</div>
+        <div class="col-6 border bg-success" style="height: 30rem;">RIGHT</div>
+    </div>
+    <div class="row">
+        <div class="col-4 border bg-danger" style="height: 20rem;">LEFT</div>
+        <div class="col-4 border bg-warning" style="height: 20rem;">MID</div>
+        <div class="col-4 border bg-success" style="height: 20rem;">RIGHT</div>
+    </div>
 </div>
 {% endblock %}
