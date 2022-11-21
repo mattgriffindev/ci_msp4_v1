@@ -1,0 +1,50 @@
+* {
+	padding: 0;
+}
+
+/*--------------------------------------------------------------------header-*/
+
+.input-group {
+	width: 75%;
+}
+
+.form-control {
+	border-top: none;
+    border-right: none;
+    border-bottom: 1px solid #111;
+    border-left: none;
+	border-radius: 0;
+}
+
+/*-------------------------------------------------------------media-queries-*/
+
+@media (max-width: 767px) {
+    .form-control {
+        border: none;
+    }
+
+    .nav-link {
+        padding: 0;
+    }
+}
+
+/* fixed top navbar only on medium and up */
+@media (min-width: 992px) {
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+    .hero-container {
+        padding-top: 164px;
+    }
+}
+
+
+.hero-container {
+    height: 100px;
+    background-color: cornflowerblue;
+}
