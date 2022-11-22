@@ -6,8 +6,6 @@
 <div class="container-fluid hero-container">
     <div class="row">
         <div class="col-12 hero-carousel">
-
-
             <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
                   <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -25,17 +23,7 @@
                     <img src="/media/test3.jpg" class="d-block w-100" alt="...">
                   </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
               </div>
-
-
         </div>
     </div>
 </div>
@@ -46,13 +34,33 @@
 {% block content %}
 <div class="container">
     <div class="row">
-        <div class="col-6 border bg-danger" style="height: 30rem;">LEFT</div>
-        <div class="col-6 border bg-success" style="height: 30rem;">RIGHT</div>
+        <div class="col-6 border border-warning">
+          <div class="feature-img-lg">
+            <img src="/media/test4.webp" class="center" alt="">
+          </div>
+        </div>
+        <div class="col-6 border border-warning">
+          <div class="feature-img-lg">
+            <img src="/media/test4.webp" class="center" alt="">
+          </div>
+        </div>
     </div>
     <div class="row">
-        <div class="col-4 border bg-danger" style="height: 20rem;">LEFT</div>
-        <div class="col-4 border bg-warning" style="height: 20rem;">MID</div>
-        <div class="col-4 border bg-success" style="height: 20rem;">RIGHT</div>
+        <div class="col-4 border border-warning">
+          <div class="feature-img-sm">
+            <img src="/media/test4.webp" class="center" alt="">
+          </div>
+        </div>
+        <div class="col-4 border border-warning">
+          <div class="feature-img-sm">
+            <img src="/media/test4.webp" class="center" alt="">
+          </div>
+        </div>
+        <div class="col-4 border border-warning">
+          <div class="feature-img-sm">
+            <img src="/media/test4.webp" class="center" alt="">
+          </div>
+        </div>
     </div>
 </div>
 {% endblock %}

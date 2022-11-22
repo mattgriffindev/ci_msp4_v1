@@ -1,8 +1,8 @@
 :root {
-	--brand-color: #111;
-	--accent-color: #111;
-	--light-color: #999;
-	--mid-color: #666;
+	--brand-color: red;
+	--accent-color: green;
+	--light-color: yellow;
+	--mid-color: blue;
 	--dark-color: #111;
 	--white: #FFF;
 	--heart: #ffb3be;
@@ -54,16 +54,41 @@ html {
 }
 
 .carousel-indicators [data-bs-target] {
-	height: 10px;
-	width: 10px;
+	height: 0.75rem;
+	width: 0.75rem;
 	background-color: transparent;
-	border: 1px solid var(--secondary-text-color);
+	border: 1px solid black;
 	border-radius: 50%;
 }
 
 .carousel-indicators .active {
-	background-color: var(--secondary-text-color);
+	background-color: black;
 }
+
+/*--------------------------------------------------------------index-content-*/
+
+.feature-img-lg {
+	height: 28rem;
+	padding: 1rem;
+}
+
+.feature-img-sm {
+	height: 14rem;
+	padding: 1rem;
+}
+
+.feature-img-lg img,
+.feature-img-sm img {
+	height: 100%;
+	object-fit: cover; 
+}
+
+.center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+  }
 
 /*--------------------------------------------------------------------footer-*/
 
@@ -152,3 +177,4 @@ html {
         padding-top: 164px;
     }
 } */
+
