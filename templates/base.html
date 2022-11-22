@@ -17,6 +17,8 @@
   {% block corecss %}
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css"
+        type="text/css" />
   <link rel="stylesheet" href="{% static 'css/base.css' %}">
   {% endblock %}
 
@@ -43,6 +45,7 @@
 
 <body>
 
+  <!--header-->
   <header class="container-fluid sticky-top">
     <div id="topnav" class="row bg-white py-lg-2">
       <div class="col-3 col-md-4 my-auto py-1 py-lg-0">
@@ -102,6 +105,7 @@
       </div>
     </div>
   </header>
+  <!--/header-->
 
   {% if messages %}
   <div class="message-container"></div>
@@ -116,6 +120,74 @@
   {% block postloadjs %}
   {% endblock %}
 
+       <!--footer-->
+       <footer id="footer">
+        <div class="container mt-3">
+            <div class="footer-row row pt-2">
+                <div class="col-12 col-md-3 footer-col">
+                    <ul>
+                        <li class="footer-heading">Heading</li>
+                        <li>
+                            <a href="">Link</a>
+                        </li>
+                        <li>
+                            <a href="">Link</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-3 footer-col">
+                    <ul>
+                        <li class="footer-heading">Heading</li>
+                        <li>
+                            <a href="">Link</a>
+                        </li>
+                        <li>
+                            <a href="">Link</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-3 footer-col">
+                    <ul>
+                        <li class="footer-heading">Heading</li>
+                        <li>
+                            <a href="">Link</a>
+                        </li>
+                        <li>
+                            <a href="">Link</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-3 footer-col">
+                    <ul>
+                        <li class="footer-heading">Contact Us</li>
+                        <li>Call <strong>0330 123 4567</strong></li>
+                        <li>Email <strong><a href="mailto:matt.griffin@live.co.uk?subject=Mail%20from%20our%20site&body=Thank%20you%20for%20contacting%20us.%20Please%20tell%20us%20how%20we%20can%20help%20you."></a>enquiries@paulreed.co.uk</strong>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row pt-1 pb-3">
+                <div class="col-12 col-md-6 footer-left">
+                    <span>
+                        <a href="https://www.twitter.com" target="_blank"><i
+                                class="social-media-icon fab fa-twitter"></i></a>
+                        <a href="https://www.facebook.com" target="_blank"><i
+                                class="social-media-icon fab fa-facebook-f"></i></a>
+                        <a href="https://www.linkedin.com" target="_blank"><i
+                                class="social-media-icon fab fa-linkedin-in"></i></a>
+                    </span>
+                </div>
+                <div class="col-12 col-md-6 footer-right">
+                    <p>Copyright Sweet Vegan 2022.
+                        <span class="d-inline d-lg-none"><br></span>
+                        Made with <i class="fas fa-heart hvr-pulse"></i> by <a href="https://github.com/mattgriffindev"
+                            target="_blank" class="signature">mattgriffindev</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--/footer-->
 
 </body>
 
