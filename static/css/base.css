@@ -20,7 +20,7 @@ html {
 /*--------------------------------------------------------------------header-*/
 
 .input-group {
-	width: 40%;
+	width: 50%;
 }
 
 .form-control {
@@ -35,7 +35,7 @@ html {
 
 
 .hero-container {
-    height: 30rem;
+    height: 32rem;
     background-color: cornflowerblue;
 }
 
@@ -45,7 +45,7 @@ html {
 
 .carousel-item {
 	position: relative;
-	height: 30rem;
+	height: 32rem;
 }
 
 .carousel-item img {
@@ -178,3 +178,28 @@ html {
     }
 } */
 
+.nav-link {
+	color: var(--secondary-text-color);
+	font-size: 1rem;
+	/* font-weight: 700; */
+}
+
+.nav-link:hover {
+	color: var(--secondary-text-color);
+}
+
+.brand {
+	text-decoration: none;
+}
+
+.brand h1 {
+	color: var(--brand-color);
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 1.5rem;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.home-essentials {
+	font-family: 'Brush Script MT', cursive;
+}
