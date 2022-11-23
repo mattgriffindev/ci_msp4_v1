@@ -46,28 +46,14 @@
 <body>
 
   <!--header-->
-  <header class="container-fluid sticky-top">
-    <div id="topnav" class="row bg-white py-lg-2">
-      <div class="col-3 col-md-4 my-auto py-1 py-lg-0">
-        <form method="GET" action="">
-          <div class="input-group">
-            <input class="form-control d-none d-md-block" type="text" name="q" placeholder="Search">
-            <div class="input-group-append">
-              <button class="form-control btn" type="submit">
-                <span class="icon">
-                  <i class="fas fa-search"></i>
-                </span>
-              </button>
-            </div>
-          </div>
-        </form>
-      </div>
-      <div class="col-6 col-md-4 my-auto py-1 py-lg-0 text-center">
+  <header class="container-fluid px-5">
+    <div class="row bg-white py-lg-2">
+      <div class="col-6 my-auto py-1 py-lg-0">
         <a href="{% url 'home' %}" class="nav-link main-logo-link">
           <h2 class="logo-font my-0">Paul Reed</h2>
         </a>
       </div>
-      <div class="col-3 col-md-4 my-auto text-start text-md-end py-1 py-lg-0">
+      <div class="col-6 my-auto text-start text-md-end py-1 py-lg-0">
         <ul class="list-inline list-unstyled my-0">
           <li class="list-inline-item dropdown">
             <a class="nav-link p-0" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true"
@@ -100,6 +86,52 @@
               </span>
               <span class="d-md-none my-0"><i class="fas fa-shopping-bag"></i></span>
             </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="row py-lg-2">
+      <div class="col-12 my-auto py-1 py-lg-0">
+        <form method="GET" action="">
+          <div class="input-group">
+            <input class="form-control d-none d-md-block" type="text" name="q" placeholder="Search">
+            <div class="input-group-append">
+              <button class="form-control btn" type="submit">
+                <span class="icon">
+                  <i class="fas fa-search"></i>
+                </span>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="row py-lg-2">
+      <div class="col-12">
+        <ul class="nav nav-pills nav-fill">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Link1</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link2</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link3</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link4</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link5</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link6</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link7</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link8</a>
           </li>
         </ul>
       </div>
