@@ -1,5 +1,5 @@
 :root {
-	--brand-color: red;
+	--brand-color: black;
 	--accent-color: green;
 	--light-color: yellow;
 	--mid-color: blue;
@@ -50,7 +50,7 @@ html {
 
 .carousel-item img {
 	height: 100%;
-	object-fit: cover;
+	object-fit: contain;
 }
 
 .carousel-indicators [data-bs-target] {
@@ -184,9 +184,7 @@ html {
 	/* font-weight: 700; */
 }
 
-.nav-link:hover {
-	color: var(--secondary-text-color);
-}
+
 
 .brand {
 	text-decoration: none;
@@ -200,6 +198,14 @@ html {
 	text-transform: uppercase;
 }
 
-.home-essentials {
-	font-family: 'Brush Script MT', cursive;
+.nav-pills .nav-link.active {
+	background-color: #111;
+	border-radius: 0%;
 }
+
+.nav-link:hover {
+	background-color: #ffb3be;
+	border-radius: 0%;
+	color: var(--secondary-text-color);
+}
+
