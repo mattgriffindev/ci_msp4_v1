@@ -69,7 +69,6 @@ html {
 
 .feature-img-lg {
 	height: 28rem;
-	padding: 1rem;
 }
 
 .feature-img-sm {
@@ -98,7 +97,7 @@ html {
 	color: var(--dark-color);
 }
 
-#footer .container {
+#footer .container-fluid {
 	border-top: 1px solid var(--brand-color);
 }
 
