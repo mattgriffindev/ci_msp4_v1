@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Source+Sans+Pro&display=swap');
+
 :root {
 	--brand-color: black;
 	--accent-color: green;
@@ -6,6 +8,9 @@
 	--dark-color: #111;
 	--white: #FFF;
 	--heart: #ffb3be;
+
+	--brand-font: 'Oswald', sans-serif;
+	--primary-font: 'Source Sans Pro', sans-serif;
 }
 
 * {
@@ -17,6 +22,12 @@ html {
 	font-size: 16px;
 }
 
+p,
+li,
+.nav-link {
+	font-family: var(--primary-font);
+}
+
 /*--------------------------------------------------------------------header-*/
 
 .brand {
@@ -25,7 +36,7 @@ html {
 
 .brand h1 {
 	color: var(--brand-color);
-	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-family: var(--brand-font);
 	font-size: 1.5rem;
 	font-weight: 700;
 	text-transform: uppercase;
@@ -43,7 +54,7 @@ html {
 }
 
 .input-group {
-	width: 50%;
+	width: 60%;
 }
 
 .form-control {
@@ -73,7 +84,10 @@ html {
 
 .carousel-item img {
 	height: 100%;
-	object-fit: contain;
+	width: auto;
+	object-fit: cover;
+	object-position: 100% 50%;
+	
 }
 
 .carousel-indicators [data-bs-target] {
