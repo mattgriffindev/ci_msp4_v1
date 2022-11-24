@@ -7,6 +7,7 @@
 	--mid-color: blue;
 	--dark-color: #111;
 	--white: #FFF;
+	--black: #111;
 	--heart: #ffb3be;
 
 	--brand-font: 'Oswald', sans-serif;
@@ -131,11 +132,9 @@ li,
 #footer {
 	position: relative;
 	bottom: 0;
-	color: var(--dark-color);
-}
+	color: var(--white);
+	background-color: var(--black);
 
-#footer .container-fluid {
-	border-top: 1px solid var(--brand-color);
 }
 
 #footer ul {
@@ -152,21 +151,9 @@ li,
 	text-decoration: none;
 }
 
-.footer-heading {
-	font-weight: 700;
-}
-
-#footer {
-	color: var(--dark-color);
-}
-
 #footer p {
 	margin: 0;
 	font-size: 1rem;
-}
-
-.footer-right {
-	text-align: right;
 }
 
 .social-media-icon {
@@ -176,7 +163,7 @@ li,
 }
 
 .strong {
-	font-weight: 600;
+	font-weight: 500;
 }
 
 .signature {
