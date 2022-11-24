@@ -54,11 +54,11 @@ li,
 	color: var(--secondary-text-color);
 }
 
-.input-group {
+#header .input-group {
 	width: 60%;
 }
 
-.form-control {
+#header .form-control {
 	border-top: none;
     border-right: none;
     border-bottom: 1px solid #111;
@@ -134,7 +134,6 @@ li,
 	bottom: 0;
 	color: var(--white);
 	background-color: var(--black);
-
 }
 
 #footer ul {
@@ -154,6 +153,23 @@ li,
 #footer p {
 	margin: 0;
 	font-size: 1rem;
+}
+
+#footer .input-group {
+	width: 60%;
+}
+
+#footer .form-control {
+	border: none;
+	border-radius: 0;
+}
+
+#footer .btn {
+	background-color: var(--white);
+}
+
+.subscribe-text {
+	padding-right: 6rem;
 }
 
 .social-media-icon {
