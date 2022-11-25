@@ -165,7 +165,7 @@ li,
 }
 
 #footer .input-group {
-	width: 60%;
+	width: 100%;
 }
 
 #footer .form-control {
@@ -175,10 +175,6 @@ li,
 
 #footer .btn {
 	background-color: var(--white);
-}
-
-.subscribe-text {
-	padding-right: 6rem;
 }
 
 .social-media-icon {
