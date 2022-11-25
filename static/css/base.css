@@ -218,3 +218,8 @@ li,
 	color: hotpink;
 }
 
+
+
+.navbar-toggler {
+	border: 0;
+}
