@@ -1,0 +1,642 @@
+[
+  {
+    "pk": 1,
+    "model": "products.product",
+    "fields": {
+      "sku": "pr2004840001",
+      "name": "Adderley Leaner Mirror",
+      "description": "Beautiful ornate mirror frame. H.165 x W.79.5 x D.6.5cm.",
+      "price": 149,
+      "category": 1,
+      "rating": 5,
+      "image1_url": "https://images2.drct2u.com/pdp_main_tablet/products/ud/ud184/u01ud184503s.jpg",
+      "image1": "u01ud184503s.jpg",
+      "image2_url": "https://images2.drct2u.com/pdp_main_tablet/products/ud/ud184/u01ud184505s.jpg",
+      "image2": "u01ud184505s.jpg"
+    }
+  },
+  {
+    "pk": 2,
+    "model": "products.product",
+    "fields": {
+      "sku": "pr2004840002",
+      "name": "Ballerina Portrait Canvas",
+      "description": "Finish off your room with this ballerina canvas with hand-painted highlights. Neutral colours add a classy touch with delicate and feminine tones. An easy piece to coordinate with most home decor schemes. Measures 57x77cm.\nH77 x W57 x DIA1.8cm",
+      "price": 18,
+      "category": 1,
+      "rating": 1,
+      "image1_url": "https://images2.drct2u.com/pdp_main_tablet/products/ky/ky746/w01ky746851s.jpg",
+      "image1": "w01ky746851s.jpg",
+      "image2_url": "https://images2.drct2u.com/pdp_main_tablet/products/ky/ky746/v01ky746501c.jpg",
+      "image2": "v01ky746501c.jpg"
+    }
+  },
+  {
+    "pk": 3,
+    "model": "products.product",
+    "fields": {
+      "sku": "pr2004840003",
+      "name": "Cosy Teddy Fleece Cushion",
+      "description": "This Cosy Teddy fleece cushion is the ideal winter warmer. Super soft touch making it the ideal addition to your home this winter.\n30 X 50cm\nThis cushion will arrive vacum packed - please open carefully and allow time to for the cushion to reinflate",
+      "price": 12,
+      "category": 1,
+      "rating": 1,
+      "image1_url": "https://images2.drct2u.com/pdp_main_tablet/products/sl/sl024/x01qf275500s.jpg",
+      "image1": "x01qf275500s.jpg",
+      "image2_url": "https://images2.drct2u.com/pdp_main_tablet/products/sl/sl024/x01qf275501s.jpg",
+      "image2": "x01qf275501s.jpg"
+    }
+  },
+  {
+    "pk": 4,
+    "model": "products.product",
+    "fields": {
+      "sku": "pr2004840004",
+      "name": "Cuddle Fleece Beanbag",
+      "description": "Use as a cosy extra seat or footstool while adding a cute accessory to the room.\n40 x 70cm.\nMachine washable.\nPolyester.",
+      "price": 42,
+      "category": 1,
+      "rating": 5,
+      "image1_url": "https://images2.drct2u.com/pdp_main_tablet/products/lo/lo726/t01lo726500s.jpg",
+      "image1": "t01lo726500s.jpg",
+      "image2_url": "https://images2.drct2u.com/pdp_main_tablet/products/lo/lo726/t01lo726503s.jpg",
+      "image2": "t01lo726503s.jpg"
+    }
+  },
+  {
+    "pk": 5,
+    "model": "products.product",
+    "fields": {
+      "sku": "pr2004840005",
+      "name": "Egyptian Cotton 600gsm Towel Midnight",
+      "description": "Made from certified Egyptian cotton for long lasting softness and durability. Sumptuously thick and luxurious with a weight of 600gsm. Designed and made with quality in mind.\nFace Cloth: 30 x 30cm. Hand Towel: 50 x 90cm. Bath Towel: 70 x 125cm. Bath Sheet: 90 x 150cm.. XL Bath Sheet: 100 x 200cm.\nMachine washable.\nCertified Egyptian Cotton",
+      "price": 36,
+      "category": 4,
+      "rating": 4,
+      "image1_url": "https://images2.drct2u.com/pdp_main_tablet/products/cz/cz622/t01cz622501s.jpg",
+      "image1": "t01cz622501s.jpg",
+      "image2_url": "https://images2.drct2u.com/pdp_main_tablet/products/cz/cz622/s01cz622500s.jpg",
+      "image2": "s01cz622500s.jpg"
+    }
+  },
+  {
+    "pk": 6,
+    "model": "products.product",
+    "fields": {
+      "sku": "pr2004840006",
+      "name": "Egyptian Cotton 600gsm Towel Sage",
+      "description": "Made from certified Egyptian cotton for long lasting softness and durability. Sumptuously thick and luxurious with a weight of 600gsm. Designed and made with quality in mind.\nFace Cloth: 30 x 30cm. Hand Towel: 50 x 90cm. Bath Towel: 70 x 125cm. Bath Sheet: 90 x 150cm.. XL Bath Sheet: 100 x 200cm.\nMachine washable.\nCertified Egyptian Cotton",
+      "price": 36,
+      "category": 4,
+      "rating": 4,
+      "image1_url": "https://images2.drct2u.com/pdp_main_tablet/products/cz/cz609/t01cz609501s.jpg",
+      "image1": "t01cz609501s.jpg",
+      "image2_url": "https://images2.drct2u.com/pdp_main_tablet/products/cz/cz609/s01cz609500s.jpg",
+      "image2": "s01cz609500s.jpg"
+    }
+  },
+  {
+    "pk": 7,
+    "model": "products.product",
+    "fields": {
+      "sku": "pr2004840007",
+      "name": "Egyptian Cotton 600gsm Towel White",
+      "description": "Made from certified Egyptian cotton for long lasting softness and durability. Sumptuously thick and luxurious with a weight of 600gsm. Designed and made with quality in mind.\nFace Cloth: 30 x 30cm. Hand Towel: 50 x 90cm. Bath Towel: 70 x 125cm. Bath Sheet: 90 x 150cm.. XL Bath Sheet: 100 x 200cm.\nMachine washable.\nCertified Egyptian Cotton",
+      "price": 36,
+      "category": 4,
+      "rating": 4,
+      "image1_url": "https://images2.drct2u.com/pdp_main_tablet/products/cz/cz510/t01cz510501s.jpg",
+      "image1": "t01cz510501s.jpg",
+      "image2_url": "https://images2.drct2u.com/pdp_main_tablet/products/cz/cz510/s01cz510500s.jpg",
+      "image2": "s01cz510500s.jpg"
+    }
+  },
+  {
+    "pk": 8,
+    "model": "products.product",
+    "fields": {
+      "sku": "pr2004840008",
+      "name": "Embroidered Bee Cushion",
+      "description": "This beautifully embroidered Bee cushion, available in a deep navy or soft lilac colour, will add a touch of unique style to any room of the house. Finished with gold tasselled corners, this comfortable cushion is plump and eyecatching.\n30x40cm/velvet\nWash at 30 dgrees or below. Do not bleach. Tumble dry on a low temperature. Do not Iron. Do not Dry Clean.\n100% polyester",
+      "price": 20,
+      "category": 1,
+      "rating": 0,
+      "image1_url": "https://images2.drct2u.com/pdp_main_tablet/products/sx/sx293/x01sx293502s.jpg",
+      "image1": "x01sx293502s.jpg",
+      "image2_url": "https://images2.drct2u.com/pdp_main_tablet/products/sx/sx293/x01sx293500s.jpg",
+      "image2": "x01sx293500s.jpg"
+    }
+  },
+  {
+    "pk": 9,
+    "model": "products.product",
+    "fields": {
+      "sku": "pr2004840009",
+      "name": "Embroidered Dragonfly cushion",
+      "description": "This beautifully embroidered Dragonfly cushion, available in a midnight blue, rich plum or classic silver colour, will add style to any room of the house. Finished with a soft velvet texture, this will add a touch of luxury to your home.\n43X43cm/velvet\nWash at 30 degrees or below. Do not bleach. Tumble dry on a low temperature. Do not Iron. Do not Dry Clean.\n100% polyester.",
+      "price": 20,
+      "category": 1,
+      "rating": 2,
+      "image1_url": "https://images2.drct2u.com/pdp_main_tablet/products/sx/sx296/x01sx296501s.jpg",
+      "image1": "x01sx296501s.jpg",
+      "image2_url": "https://images2.drct2u.com/pdp_main_tablet/products/sx/sx296/x01sx296504s.jpg",
+      "image2": "x01sx296504s.jpg"
+    }
+  },
+  {
+    "pk": 10,
+    "model": "products.product",
+    "fields": {
+      "sku": "pr2004840010",
+      "name": "Etched Floral Vase",
+      "description": "This beautiful Etched Floral Vase is perfect for a medium to large bunch of flowers, the vase looks simply stunning when in and out of use. A perfect gift for any occasion.\n16.5 cm (Dia) x 30 cm",
+      "price": 25,
+      "category": 2,
+      "rating": 1,
+      "image1_url": "https://images2.drct2u.com/pdp_main_tablet/products/ky/ky258/w01ky258500s.jpg",
+      "image1": "w01ky258500s.jpg",
+      "image2_url": "https://images2.drct2u.com/pdp_main_tablet/products/ky/ky258/w01ky258502s.jpg",
+      "image2": "w01ky258502s.jpg"
+    }
+  },
+  {
+    "pk": 11,
+    "model": "products.product",
+    "fields": {
+      "sku": "pr2004840011",
+      "name": "Fusion Highland Cow Filled Cushion",
+      "description": "A grey cotton filled cushion featuring a Highland cow print & zip fastening.\nMachine washable at 40C, Do Not Tumble Dry, Iron on Low.\n100% Cotton. 43cm x 43cm",
+      "price": 12,
+      "category": 1,
+      "rating": 0,
+      "image1_url": "https://images2.drct2u.com/pdp_main_tablet/products/oh/oh719/w01oh719502s.jpg",
+      "image1": "w01oh719502s.jpg",
+      "image2_url": "https://images2.drct2u.com/pdp_main_tablet/products/oh/oh719/w01oh719500s.jpg",
+      "image2": "w01oh719500s.jpg"
+    }
+  },
+  {
+    "pk": 12,
+    "model": "products.product",
+    "fields": {
+      "sku": "pr2004840012",
+      "name": "Gozo Concrete Cotton Jar",
+      "description": "This cotton jar provides a wide space for storing cotton swabs, cotton balls or cosmetic pads. Made from concrete, it has a clean lined base topped with a rounded lid which has a matching knob handle for an easy lift. Functional and decorative, this jar will keep the bathroom tidy and will look elegant sitting on the shelf with its terrazzo design.",
+      "price": 16,
+      "category": 4,
+      "rating": 0,
+      "image1_url": "https://images2.drct2u.com/pdp_main_tablet/products/xe/xe733/x01xe733853s.jpg",
+      "image1": "x01xe733853s.jpg",
+      "image2_url": "https://images2.drct2u.com/pdp_main_tablet/products/xe/xe733/x01xe733851s.jpg",
+      "image2": "x01xe733851s.jpg"
+    }
+  },
+  {
+    "pk": 13,
+    "model": "products.product",
+    "fields": {
+      "sku": "pr2004840013",
+      "name": "Gozo Concrete Lotion Dispenser",
+      "description": "This concrete lotion dispenser will be a striking addition to the modern bathroom with its gold finished push top which allows an effortless release of soap when pressed. The luxe pump is contrasted with multicoloured terrazzo effect accentuated on the muted grey surface. Style and coordinate it with the Gozo tumbler or soap dish for a likewise visual appeal.",
+      "price": 16,
+      "category": 4,
+      "rating": 0,
+      "image1_url": "https://images2.drct2u.com/pdp_main_tablet/products/xe/xe722/x01xe722853s.jpg",
+      "image1": "x01xe722853s.jpg",
+      "image2_url": "https://images2.drct2u.com/pdp_main_tablet/products/xe/xe722/x01xe722852s.jpg",
+      "image2": "x01xe722852s.jpg"
+    }
+  },
+  {
+    "pk": 14,
+    "model": "products.product",
+    "fields": {
+      "sku": "pr2004840014",
+      "name": "Gozo Concrete Soap Dish",
+      "description": "This concrete soap dish features a muted grey finish base with a multicoloured terrazzo effect on it. The dish has an oval design with a slight depth in its centre to keep soap in place. Style and pair it with the Gozo tumbler or cotton jar to bring a sophisticated visual appeal on the bathroom shelf.",
+      "price": 12,
+      "category": 4,
+      "rating": 0,
+      "image1_url": "https://images2.drct2u.com/pdp_main_tablet/products/xe/xe734/x01xe734852s.jpg",
+      "image1": "x01xe734852s.jpg",
+      "image2_url": "https://images2.drct2u.com/pdp_main_tablet/products/xe/xe734/x01xe734851s.jpg",
+      "image2": "x01xe734851s.jpg"
+    }
+  },
+  {
+    "pk": 15,
+    "model": "products.product",
+    "fields": {
+      "sku": "pr2004840015",
+      "name": "Gozo Concrete Tumbler",
+      "description": "Made from robust concrete, this tumbler will be a durable as well as stylish addition to the modern bathroom. Its muted grey finish surface is decorated with a multicoloured terrazzo effect whichproduced an eye-catching pattern. Style and coordinate it with the Gozo lotion dispenser or soap dish for a likewise visual appeal.",
+      "price": 14,
+      "category": 4,
+      "rating": 0,
+      "image1_url": "https://images2.drct2u.com/pdp_main_tablet/products/xe/xe725/x01xe725852s.jpg",
+      "image1": "x01xe725852s.jpg",
+      "image2_url": "https://images2.drct2u.com/pdp_main_tablet/products/xe/xe725/x01xe725851s.jpg",
+      "image2": "x01xe725851s.jpg"
+    }
+  },
+  {
+    "pk": 16,
+    "model": "products.product",
+    "fields": {
+      "sku": "pr2004840016",
+      "name": "Gray & Osbourn No.4 Leopard Vase",
+      "description": "Our Gray & Osbourn No.4 Leopard Vase will definitely add character to your home. A striking mix of brown and amber infused tones, this glass vase would serve best as a traditional vase to house flowers, or modernised with some dried flowers or pampas grass stems.\nW14cm x H40cm\nWipe clean with a dry cloth.",
+      "price": 30,
+      "category": 2,
+      "rating": 0,
+      "image1_url": "https://images2.drct2u.com/pdp_main_tablet/products/sx/sx856/x01sx856500s.jpg",
+      "image1": "x01sx856500s.jpg",
+      "image2_url": "https://images2.drct2u.com/pdp_main_tablet/products/sx/sx856/x01sx856501s.jpg",
+      "image2": "x01sx856501s.jpg"
+    }
+  },
+  {
+    "pk": 17,
+    "model": "products.product",
+    "fields": {
+      "sku": "pr2004840017",
+      "name": "Grey Rattan Table Lamp",
+      "description": "The geometric weave design on this rattan table lamp is a bold statement for any living room Finished in grey plenty of light escapes through the breaks in the shade design which is attached to a solid grey base which complements all modern interiors Bulb not included but we recommend a E27 Golf Ball 7W LED Bulb.\nL.17 x W.17 x H.20cm",
+      "price": 12,
+      "category": 2,
+      "rating": 5,
+      "image1_url": "https://images2.drct2u.com/pdp_main_tablet/products/br/br125/v01br125748s.jpg",
+      "image1": "v01br125748s.jpg",
+      "image2_url": "https://images2.drct2u.com/pdp_main_tablet/products/br/br125/w01br125851s.jpg",
+      "image2": "w01br125851s.jpg"
+    }
+  },
+  {
+    "pk": 18,
+    "model": "products.product",
+    "fields": {
+      "sku": "pr2004840018",
+      "name": "Hispi Dress Mirror Pewter",
+      "description": "The Hispi Mirror is an elegant mirror that will look great in many different rooms. It has two fixing positions which allows it to be mounted either vertically or horizontally to the wall, adding a lovely element to your room. The mirror glass is surrounded by a stunning metal trim that will add a stylish touch to any room making it look bigger and brighter. Brand: Julian Bowen.\nH.128 x W.38 x D.3.5cm. Weight 6.8kg.",
+      "price": 39,
+      "category": 1,
+      "rating": 5,
+      "image1_url": "https://images2.drct2u.com/pdp_main_tablet/products/gg/gg401/t01gg401569c.jpg",
+      "image1": "t01gg401569c.jpg",
+      "image2_url": "https://images2.drct2u.com/pdp_main_tablet/products/gg/gg401/w01gg401851s.jpg",
+      "image2": "w01gg401851s.jpg"
+    }
+  },
+  {
+    "pk": 19,
+    "model": "products.product",
+    "fields": {
+      "sku": "pr2004840019",
+      "name": "Koala Framed Print",
+      "description": "This Koala will add a playful touch to your wall, pair with other animal images from far away lands. The black and white framed print with create a beautiful and whimsical focal point to your home\nH50 x W50 x DIA2.2cm",
+      "price": 13,
+      "category": 1,
+      "rating": 0,
+      "image1_url": "https://images2.drct2u.com/pdp_main_tablet/products/ky/ky797/v01ky797851c.jpg",
+      "image1": "v01ky797851c.jpg",
+      "image2_url": "https://images2.drct2u.com/pdp_main_tablet/products/ky/ky797/v01ky797501s.jpg",
+      "image2": "v01ky797501s.jpg"
+    }
+  },
+  {
+    "pk": 20,
+    "model": "products.product",
+    "fields": {
+      "sku": "pr2004840020",
+      "name": "Leaf Teacup Embossed Planter",
+      "description": "This unique teacup planter is a great addition to any garden. Perfect to compliment your favourite plants and flowers.\nPot: H 15 x W 22 x D 22cm. Saucer: H 2 x W 22 x D 22cm\nCeramic",
+      "price": 35,
+      "category": 2,
+      "rating": 0,
+      "image1_url": "https://images2.drct2u.com/pdp_main_tablet/products/fw/fw456/u01fw456500s.jpg",
+      "image1": "u01fw456500s.jpg",
+      "image2_url": "https://images2.drct2u.com/pdp_main_tablet/products/fw/fw456/u01fw456501s.jpg",
+      "image2": "u01fw456501s.jpg"
+    }
+  },
+  {
+    "pk": 21,
+    "model": "products.product",
+    "fields": {
+      "sku": "pr2004840021",
+      "name": "Leopard Accent Table",
+      "description": "The Leopard Side Table is just what you need if you're looking for something out of the ordinary. Featuring a majestic leopard base in an antique gold finish with a round glass top, this side table is perfect as a decorative side table in your living room or a plant stand.\nEasy build assembly\nH.55 x Dia.38 cm",
+      "price": 119,
+      "category": 2,
+      "rating": 4,
+      "image1_url": "https://images2.drct2u.com/pdp_main_tablet/products/jo/jo449/x01jo449500s.jpg",
+      "image1": "x01jo449500s.jpg",
+      "image2_url": "https://images2.drct2u.com/pdp_main_tablet/products/jo/jo449/x01jo449501s.jpg",
+      "image2": "x01jo449501s.jpg"
+    }
+  },
+  {
+    "pk": 22,
+    "model": "products.product",
+    "fields": {
+      "sku": "pr2004840022",
+      "name": "Living Nostalgia Sage Biscuit Tin",
+      "description": "Living Room\nKitchen & Dining\nBathroom\nOffice\nHomewares\nAppliances\nTech & Gaming\nGarden & DIY\nSports & Leisure\nGifts\nToys & Nursery\nExtended free returns\nwith our flexible options\nPay £0 today\nwith a Home Pay account\nDelivery options\nfrom only £3.99\nCustomer Reviews\nChristmas shop\nMake it magical\nSPEND MORE, SAVE MORE\n£15 off £150 use code: HAVE1\n£30 off £250 use code: HAVE2\n£45 off £350 use code: HAVE3\n*Excludes Apple, Gaming & Dyson. Includes sale. Minimum spends apply.\nKeep your favourite biscuits fresh for longer in this elegant biscuit tin. This robust and practical steel canister is decorated in Living Nostalgia's classic style, with a powder-coated finish. Simply delicious! Like all of KitchenCraft's Living Nostalgia creations, this tin is inspired by the functional forms and vintage character of times gone by. The soft colours complement traditional and modern kitchens, giving an understated look that blends in with any setting. As a final decorative touch, the container is printed with the word 'BISCUITS'. So whether you've baked a fresh batch of cookies at home, or you've treated yourself to a pack of custard creams, you'll always know where to look for the next sugary snack. Measures 14.5 x 19 cm (6 in x 7.5 inches). Hand-wash only. This tin is made of robust steel, for a lightweight yet durable construction - just like biscuit tins used to be. It has the same tall design as KitchenCraft's other popular Living Nostalgia storage canisters. Its square footprint maximises space on the kitchen worktop, and it can sit neatly on a shelf with other storage tins too. The biscuit tin has a tight-fitting lid, which keeps your biscuits crisp and delicious for longer (if you can resist eating them!). Though the lid fits snugly on top of the tin, you won't need to break any nails to get it open. The easy-open handle means you only need to give a gentle tug to pop the lid off.",
+      "price": 16,
+      "category": 3,
+      "rating": 3,
+      "image1_url": "https://images2.drct2u.com/pdp_main_tablet/products/fh/fh480/w01fh480851s.jpg",
+      "image1": "w01fh480851s.jpg",
+      "image2_url": "https://images2.drct2u.com/pdp_main_tablet/products/fh/fh480/w01fh480851s.jpg",
+      "image2": "w01fh480851s.jpg"
+    }
+  },
+  {
+    "pk": 23,
+    "model": "products.product",
+    "fields": {
+      "sku": "pr2004840023",
+      "name": "Living Nostalgia Sage Bread Bin",
+      "description": "The KitchenCraft Living Nostalgia large metal bread bin combines timeless vintage design with everyday practicality. The robust steel box keeps your fresh bread fresher for longer, and is big enough to accommodate a large family loaf. The bread bin is made of robust steel, with a soft English Sage powder coated finish. This stylish and sturdy designs harks back to the days of vintage kitchenware, when things were made to last - complemented with a delicate charm that brings a sense of timelessness to any decor. As a final touch, the bread box has attractive ridge detailing and the word 'BREAD' printed across its front. It works well in both modern and traditional kitchens, and makes a lovely gift for anyone who enjoys making their own bread, or appreciates vintage style. Robust, Lightweight and Practical. The clever folks at KitchenCraft have designed this bread bin to be very durable yet lightweight and convenient. The bin has a traditional top-opening lid, plus riveted handles on the side, so it's easy to move it from your kitchen countertop to a pantry or cupboard. You could even bring it straight to the table and let guests help themselves to some delicious crusty bread. The Living Nostalgia collection features bucolic enamel bakeware, sturdy steel canisters, vintage-style scales, handy housekeeping boxes and much more. Measures 34 x 21.5 x 25 cm (13.5 x 8.5 x 10 inches)",
+      "price": 38,
+      "category": 3,
+      "rating": 0,
+      "image1_url": "https://images2.drct2u.com/pdp_main_tablet/products/fh/fh486/w01fh486855s.jpg",
+      "image1": "w01fh486855s.jpg",
+      "image2_url": "https://images2.drct2u.com/pdp_main_tablet/products/fh/fh486/w01fh486852w.jpg",
+      "image2": "w01fh486852w.jpg"
+    }
+  },
+  {
+    "pk": 24,
+    "model": "products.product",
+    "fields": {
+      "sku": "pr2004840024",
+      "name": "Living Nostalgia Sage Cake Tin",
+      "description": "Preserve your freshly baked cakes for longer in this timeless two-piece cake tin. The robust and practical steel container has an airtight seal for freshness, and is decorated in Living Nostalgia's classic farmhouse style. Like all of KitchenCraft's Living Nostalgia creations, this domed cake tin is inspired by the functional forms and vintage character of times gone by. The soft English Sage powder-coated finish complements traditional and modern homes, giving it an understated look that blends beautifully with any setting. As a final decorative touch, the container is printed with the word 'CAKE'. So whether you're baked a fresh Victoria sponge at home, or you've treated yourself to a mouth-watering cake from the farmer's market, you'll always know where to look for just one more slice! The domed cake tin has a tight-fitting lid and airtight silicone seal, so your cake stays fresh for serving. The brushed silver handle on the lid ensures a secure grip - you can even hold the tin from just the handle without the platter coming away from the lid! This tin comes in two parts, a cake plate and a domed lid. There's plenty of space inside for double- and even triple-layered cakes (just like they used to bake!). And best of all, you can use the platter base separately to present your baked creations.",
+      "price": 30,
+      "category": 3,
+      "rating": 0,
+      "image1_url": "https://images2.drct2u.com/pdp_main_tablet/products/fh/fh484/w01fh484851s.jpg",
+      "image1": "w01fh484851s.jpg",
+      "image2_url": "https://images2.drct2u.com/pdp_main_tablet/products/fh/fh484/v01bn564500c.jpg",
+      "image2": "v01bn564500c.jpg"
+    }
+  },
+  {
+    "pk": 25,
+    "model": "products.product",
+    "fields": {
+      "sku": "pr2004840025",
+      "name": "Living Nostalgia Sage Canisters",
+      "description": "Store your tea and coffee-making essentials with a touch of old-fashioned functionality and a sprinkle of style from yesteryear. Don't let spoilt tea bags, clumped sugar or stale coffee ruin your next brew. These KitchenCraft Living Nostalgia tea, coffee and sugar canisters feature tight-fitting lids to keep moisture out, and freshness locked in for longer. As well as being a practical addition to your kitchen's worktops, the set features plenty of vintage style. Each one is made of robust steel with a neat square base. You won't have any trouble telling these tea, coffee and sugar tins apart. As a final detail, each tin is finished with 'TEA', 'COFFEE' or 'SUGAR' printed across its front. Set includes tea, coffee and sugar canisters. Each measures 11 x 11 x 17 cm (4.5 x 4.5 x 6.5 inches). Hand-wash only. Finding a spot on a crowded worktop for these tea, coffee and sugar storage containers is easy. That's because the clever folks at KitchenCraft have given each piece soft curves and a compact, square footprint. You can neatly stow them away in corners, to make the most of every spare spot of space. Create a Vintage-Inspired Kitchen Storage Collection.",
+      "price": 30,
+      "category": 3,
+      "rating": 5,
+      "image1_url": "https://images2.drct2u.com/pdp_main_tablet/products/fh/fh479/w01fh479851s.jpg",
+      "image1": "w01fh479851s.jpg",
+      "image2_url": "https://images2.drct2u.com/pdp_main_tablet/products/fh/fh479/w01fh479851s.jpg",
+      "image2": "w01fh479851s.jpg"
+    }
+  },
+  {
+    "pk": 26,
+    "model": "products.product",
+    "fields": {
+      "sku": "pr2004840026",
+      "name": "Living Nostalgia Sage Mechanical Scales",
+      "description": "KitchenCraft Living Nostalgia knows that baking is more than just a hobby -it's a way of life. That's why it's created these mechanical kitchen scales. Their classic look is inspired by vintage kitchens, while their robust design harks back to a time of peerless craftsmanship. This set of scales features an old-fashioned dial, powered by a finely tuned mechanical mechanism. It's designed to be easy to read, and displays weights in imperial (lbs) and metric (kg) units, so it's easy to follow those classic recipes from vintage cookbooks. The dial is divided into increments of 20 grammes and one ounce for highly accurate measuring. More Information: Scales measure 30 x 25 cm (12 x 10 inches). Bowl is dishwasher safe. Scales are wipe-clean only. Features adjustment dial to calibrate mechanism. These mechanical kitchen scales are great for measuring out all manner of ingredients - from fruits to flour, butter to icing sugar. They feature an extra-large bowl made of high-quality stainless steel with a lovely mirror polished finish. The wide design means you can measure up to 4 kgs / 8.5 lbs in one go, and because it's stainless steel, it won't pick up flavours or odours. You can also flip the bowl and place it over the top of the scales for easy storage. Vintage kitchenware wasn't just useful - it was beautiful. KitchenCraft's Living Nostalgia collection takes cues from the rustic kitchens of the past, resulting in a range of convenient kitchen and household products that's equal parts pretty and practical.",
+      "price": 45,
+      "category": 3,
+      "rating": 0,
+      "image1_url": "https://images2.drct2u.com/pdp_main_tablet/products/fh/fh481/w01fh481851s.jpg",
+      "image1": "w01fh481851s.jpg",
+      "image2_url": "https://images2.drct2u.com/pdp_main_tablet/products/fh/fh481/t01bn559503s.jpg",
+      "image2": "t01bn559503s.jpg"
+    }
+  },
+  {
+    "pk": 27,
+    "model": "products.product",
+    "fields": {
+      "sku": "pr2004840027",
+      "name": "Milano Black Soap Dish",
+      "description": "This textured black and grey ombre design is stylish but minimal, perfect for those who want to elevate their style that extra bit. Coordinating products available.\n",
+      "price": 9,
+      "category": 4,
+      "rating": 0,
+      "image1_url": "https://images2.drct2u.com/pdp_main_tablet/products/xe/xe680/x01xe680851s.jpg",
+      "image1": "x01xe680851s.jpg",
+      "image2_url": "https://images2.drct2u.com/pdp_main_tablet/products/xe/xe680/x01xe680851s.jpg",
+      "image2": "x01xe680851s.jpg"
+    }
+  },
+  {
+    "pk": 28,
+    "model": "products.product",
+    "fields": {
+      "sku": "pr2004840028",
+      "name": "Milano Black Soap Dispenser",
+      "description": "This textured black and grey ombre design is stylish but minimal, perfect for those who want to elevate their style that extra bit. Coordinating products available.",
+      "price": 12,
+      "category": 4,
+      "rating": 0,
+      "image1_url": "https://images2.drct2u.com/pdp_main_tablet/products/xe/xe662/x01xe662851s.jpg",
+      "image1": "x01xe662851s.jpg",
+      "image2_url": "https://images2.drct2u.com/pdp_main_tablet/products/xe/xe662/x01xe662851s.jpg",
+      "image2": "x01xe662851s.jpg"
+    }
+  },
+  {
+    "pk": 29,
+    "model": "products.product",
+    "fields": {
+      "sku": "pr2004840029",
+      "name": "Milano Black Tumbler",
+      "description": "This textured black and grey ombre design is stylish but minimal, perfect for those who want to elevate their style that extra bit. Coordinating products available.",
+      "price": 10,
+      "category": 4,
+      "rating": 0,
+      "image1_url": "https://images2.drct2u.com/pdp_main_tablet/products/xe/xe666/x01xe666851s.jpg",
+      "image1": "x01xe666851s.jpg",
+      "image2_url": "https://images2.drct2u.com/pdp_main_tablet/products/xe/xe666/x01xe666851s.jpg",
+      "image2": "x01xe666851s.jpg"
+    }
+  },
+  {
+    "pk": 30,
+    "model": "products.product",
+    "fields": {
+      "sku": "pr2004840030",
+      "name": "Monkey Side Table",
+      "description": "Add a safari chic vibe to your space with the quirky monkey side table. Featuring a sculptured monkey base in an antique gold finish with a glass top, this side table is sure to turn heads, whether placed in your living room or hallway. Use as a decorative side table for your cup of tea or even as a plant stand.\nSelf-assembly\nH.52 x W.46 x D.46cm.",
+      "price": 89,
+      "category": 2,
+      "rating": 5,
+      "image1_url": "https://images2.drct2u.com/pdp_main_tablet/products/ix/ix201/u01ix201503s.jpg",
+      "image1": "u01ix201503s.jpg",
+      "image2_url": "https://images2.drct2u.com/pdp_main_tablet/products/ix/ix201/u01ix201501s.jpg",
+      "image2": "u01ix201501s.jpg"
+    }
+  },
+  {
+    "pk": 31,
+    "model": "products.product",
+    "fields": {
+      "sku": "pr2004840031",
+      "name": "Peacock Side Table",
+      "description": "The Peacock Side Table is a perfect choice for those who want a quirky piece within their room. Featuring an elegant gold peacock and a clear glass top, this piece is a showstopper for all the right reasons.\nEasy Build Assembly.\nH.52 x W.45 x L.45 cm",
+      "price": 99,
+      "category": 2,
+      "rating": 4,
+      "image1_url": "https://images2.drct2u.com/pdp_main_tablet/products/ix/ix757/v01ix757501s.jpg",
+      "image1": "v01ix757501s.jpg",
+      "image2_url": "https://images2.drct2u.com/pdp_main_tablet/products/ix/ix757/v01ix757500s.jpg",
+      "image2": "v01ix757500s.jpg"
+    }
+  },
+  {
+    "pk": 32,
+    "model": "products.product",
+    "fields": {
+      "sku": "pr2004840032",
+      "name": "Prowling Leopard Lamp",
+      "description": "Add A Bold Statement To Any Room With This Prowling Leopard Table Lamp. In A Gold Finish And Depicting A Leopard Holding A Light In Its Mouth, This Contemporary Lamp Will Add A Touch Of Fun To Any Home. Bulb not included but we recommend 1 x E27 Golf Ball LED 7W\nPlease ensure to refer to Instruction leaflet supplied with product\n460x130x280mm\nClean with Dry Cloth\nResin, Metal",
+      "price": 55,
+      "category": 2,
+      "rating": 1,
+      "image1_url": "https://images2.drct2u.com/pdp_main_tablet/products/nd/nd738/x01nd738500s.jpg",
+      "image1": "x01nd738500s.jpg",
+      "image2_url": "https://images2.drct2u.com/pdp_main_tablet/products/nd/nd738/x01nd738501s.jpg",
+      "image2": "x01nd738501s.jpg"
+    }
+  },
+  {
+    "pk": 33,
+    "model": "products.product",
+    "fields": {
+      "sku": "pr2004840033",
+      "name": "Set Of Three Ornamental Succulents",
+      "description": "Realistic look with non of the hassle.\n12(H) x 6(W) cm.\nArtificial.",
+      "price": 15,
+      "category": 2,
+      "rating": 3,
+      "image1_url": "https://images2.drct2u.com/pdp_main_tablet/products/ud/ud870/u01ud870500s.jpg",
+      "image1": "u01ud870500s.jpg",
+      "image2_url": "https://images2.drct2u.com/pdp_main_tablet/products/ud/ud870/w01ud870851s.jpg",
+      "image2": "w01ud870851s.jpg"
+    }
+  },
+  {
+    "pk": 34,
+    "model": "products.product",
+    "fields": {
+      "sku": "pr2004840034",
+      "name": "Small Whale Planter",
+      "description": "Handmade by a skillful artisan, these beautiful pots feature a nice pattern that will look elegant with any plant, and it comes in soft neutral finishes. Suitable for indoor and outdoor use.\nHandmade\n29 X 25 X 21 (CM)\nDo not put your pottery under extreme weather or in the dishwasher. Clean by a soft scrub brush and dish soap, and avoid metal and/or abrasive sponges.\nResin. Teracotta Handpainted.",
+      "price": 39,
+      "category": 2,
+      "rating": 0,
+      "image1_url": "https://images2.drct2u.com/pdp_main_tablet/products/sn/sn911/w01sn911501s.jpg",
+      "image1": "w01sn911501s.jpg",
+      "image2_url": "https://images2.drct2u.com/pdp_main_tablet/products/sn/sn911/w01sn911500s.jpg",
+      "image2": "w01sn911500s.jpg"
+    }
+  },
+  {
+    "pk": 35,
+    "model": "products.product",
+    "fields": {
+      "sku": "pr2004840035",
+      "name": "Tower Empire Bread Bin Grey",
+      "description": "Tidily store your baked produce away within the durable structure of this bread bin. Supporting a rolltop lid to grant access to the contents inside, the quality stainless steel material features a black coated V shaped texturing to the roll top lid to add a splash of style across your kitchen side. The large capacity provides plenty of storage space to easily fit a variety of sized loaves, bagels, crumpets and muffins, complete with ventilation holes across the main body so your perishables remain fresher for a longer period of time. The durable metal design is also easy to clean, requiring just a simple wipe down with a damp cloth to maintain. This bread bin forms part of a wider empire kitchen collection which includes a range of essential kitchen and other domestic products, featuring canisters and a mug tree and towel pole set.\nH.19 x W.39 x D.27.5cm.",
+      "price": 27,
+      "category": 3,
+      "rating": 0,
+      "image1_url": "https://images2.drct2u.com/pdp_main_tablet/products/uh/uh544/x01uh544851s.jpg",
+      "image1": "x01uh544851s.jpg",
+      "image2_url": "https://images2.drct2u.com/pdp_main_tablet/products/uh/uh544/t01sq982507s.jpg",
+      "image2": "t01sq982507s.jpg"
+    }
+  },
+  {
+    "pk": 36,
+    "model": "products.product",
+    "fields": {
+      "sku": "pr2004840036",
+      "name": "Tower Empire Set of 3 Canisters Grey",
+      "description": "This set of 3 Empire canisters is the perfect way to store your tea, coffee and sugar on your kitchen countertop. Each canister features a stylish grey body complimented by a mirrored finish lid with a unique V shaped pattern and topped off with polished elegant bronze accents around the base, providing an eye-catching addition to your kitchen decor. The capacity for each canister is 1.3 litres, which will ensure your contents will last a significant amount of time. The lids have been designed to include a large hoop that makes the canisters easier to open. They are also easy to maintain, requiring just a simple wipe to clean in order to maintain the quality finish. Dimensions for each canister are H14.50 x W13.50 x D11.00cm. This set forms part of the Empire range of kitchen products, which includes a towel pole, mug tree and bread bin.",
+      "price": 27,
+      "category": 3,
+      "rating": 0,
+      "image1_url": "https://images2.drct2u.com/pdp_main_tablet/products/uh/uh536/x01uh536851s.jpg",
+      "image1": "x01uh536851s.jpg",
+      "image2_url": "https://images2.drct2u.com/pdp_main_tablet/products/uh/uh536/t01sq983507s.jpg",
+      "image2": "t01sq983507s.jpg"
+    }
+  },
+  {
+    "pk": 37,
+    "model": "products.product",
+    "fields": {
+      "sku": "pr2004840037",
+      "name": "Typhoon Monochrome Biscuit Jar",
+      "description": "Monochrome large storage tin in hardwearing and durable steel. With a bamboo wood lid it has an air tight seal. Perfect for storing biscuits!\n15 x 11 x 11cm.\nCoated steel with bamboo lid.",
+      "price": 14,
+      "category": 3,
+      "rating": 5,
+      "image1_url": "https://images2.drct2u.com/pdp_main_tablet/products/ir/ir323/q01ir323502s.jpg",
+      "image1": "q01ir323502s.jpg",
+      "image2_url": "https://images2.drct2u.com/pdp_main_tablet/products/ir/ir319/q01ir319500s.jpg",
+      "image2": "q01ir319500s.jpg"
+    }
+  },
+  {
+    "pk": 38,
+    "model": "products.product",
+    "fields": {
+      "sku": "pr2004840038",
+      "name": "Typhoon Monochrome Utensil Pot",
+      "description": "Monochrome utensil storage pot in grey. In hardwearing and durable steel, with a lovely monochrome pattern. Coordinating items available.\n15 x 11 x 11cm.",
+      "price": 8,
+      "category": 3,
+      "rating": 1,
+      "image1_url": "https://images2.drct2u.com/pdp_main_tablet/products/ir/ir321/q01ir321502s.jpg",
+      "image1": "q01ir321502s.jpg",
+      "image2_url": "https://images2.drct2u.com/pdp_main_tablet/products/ir/ir319/q01ir319500s.jpg",
+      "image2": "q01ir319500s.jpg"
+    }
+  },
+  {
+    "pk": 39,
+    "model": "products.product",
+    "fields": {
+      "sku": "pr2004840039",
+      "name": "Typhoon Set of 3 Monochrome Tea, Coffee, Sugar Canisters",
+      "description": "Set of 3 monochrome storage jars in white, grey and black. Made from steel, these hardwearing and durable canisters come with a sustainable bamboo wood lid, giving an airtight seal. Perfect for storing your tea, coffee and sugar. Coordinating items available.\n12.8 x 11 x 11cm.\nSteel and Bamboo.",
+      "price": 22,
+      "category": 3,
+      "rating": 5,
+      "image1_url": "https://images2.drct2u.com/pdp_main_tablet/products/ir/ir319/q01ir319502c.jpg",
+      "image1": "q01ir319502c.jpg",
+      "image2_url": "https://images2.drct2u.com/pdp_main_tablet/products/ir/ir319/q01ir319500s.jpg",
+      "image2": "q01ir319500s.jpg"
+    }
+  },
+  {
+    "pk": 40,
+    "model": "products.product",
+    "fields": {
+      "sku": "pr2004840040",
+      "name": "Velvet Peacock Cushion",
+      "description": "Featuring a beautiful peacock design, this stunning teal coloured cushion is crafted from a luxuriously smooth velvet fabric and is ideal to bring a touch of glamour to any room.\n43 x 43 cm\nWashable\n100% Polyester",
+      "price": 15,
+      "category": 1,
+      "rating": 4,
+      "image1_url": "https://images2.drct2u.com/pdp_main_tablet/products/gg/gg787/v01gg787502s.jpg",
+      "image1": "v01gg787502s.jpg",
+      "image2_url": "https://images2.drct2u.com/pdp_main_tablet/products/gg/gg787/v01gg787503s.jpg",
+      "image2": "v01gg787503s.jpg"
+    }
+  }
+]
