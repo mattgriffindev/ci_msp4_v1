@@ -8,8 +8,10 @@
           Shop by department
         </a>
         <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#">Link</a></li>
-          <li><a class="dropdown-item" href="#">Link</a></li>
+          <li><a class="dropdown-item" href="{% url 'products' %}?category=bedroom">Bedroom</a></li>
+          <li><a class="dropdown-item" href="{% url 'products' %}?category=living_room">Living Room</a></li>
+          <li><a class="dropdown-item" href="{% url 'products' %}?category=kitchen_dining">Kitchen & Dining</a></li>
+          <li><a class="dropdown-item" href="{% url 'products' %}?category=bathroom">Bathroom</a></li>
           <li><hr class="dropdown-divider"></li>
           <li><a class="dropdown-item" href="{% url 'products' %}">All departments</a></li>
         </ul>
