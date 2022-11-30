@@ -14,6 +14,20 @@
         <div class="row">
             <div class="col text-center mt-3">
                 <h2>Products</h2>
+
+                
+                  <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Sort by:
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="{% url 'products' %}?sort=price&direction=asc">Price (Low to High)</a></li>
+                      <li><a class="dropdown-item" href="{% url 'products' %}?sort=rating&direction=desc">Rating (High to Low)</a></li>
+                      <li><a class="dropdown-item" href="{% url 'products' %}?sort=category&direction=asc">Category (A-Z)</a></li>
+                    </ul>
+                  </div>
+
+
             </div>
         </div>
         <div class="row">
