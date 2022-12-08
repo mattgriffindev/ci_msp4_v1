@@ -75,6 +75,10 @@ li,
 	border-radius: 0;
 }
 
+.navbar-toggler {
+	border: 0;
+}
+
 /*----------------------------------------------------------------------hero-*/
 
 
@@ -216,9 +220,6 @@ li,
 
 
 
-.navbar-toggler {
-	border: 0;
-}
 
 
 .btt-button {
@@ -232,3 +233,4 @@ li,
 .btt-link {
     cursor: pointer;
 }
+
