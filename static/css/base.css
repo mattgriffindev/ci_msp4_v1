@@ -29,6 +29,20 @@ li,
 	font-family: var(--primary-font);
 }
 
+.btt-button {
+    height: 42px;
+    width: 42px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+.btt-link,
+.update-link,
+.remove-item {
+    cursor: pointer;
+}
+
 /*--------------------------------------------------------------------header-*/
 
 .brand {
@@ -140,6 +154,19 @@ li,
 	width: 100%;
   }
 
+/* ---------------------------------------------------------bootstrap-toasts-*/
+
+.alert-container {
+    position: fixed;
+    top: 72px;
+    right: 15px;
+	height: auto;
+	width: 12.5rem;
+    z-index: 99999999999;
+	background-color: white;
+	border: 1px solid hotpink;
+}
+
 /*--------------------------------------------------------------------footer-*/
 
 #footer {
@@ -220,19 +247,4 @@ li,
 
 
 
-
-
-.btt-button {
-    height: 42px;
-    width: 42px;
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-}
-
-.btt-link,
-.update-link,
-.remove-item {
-    cursor: pointer;
-}
 
