@@ -160,11 +160,7 @@ li,
     position: fixed;
     top: 72px;
     right: 15px;
-	height: auto;
-	width: 12.5rem;
     z-index: 99999999999;
-	background-color: white;
-	border: 1px solid hotpink;
 }
 
 /*--------------------------------------------------------------------footer-*/

@@ -130,11 +130,18 @@
   {% if messages %}
   <div class="alert-container">
       {% for message in messages %}
-        
-      {% if message.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %}
-        {% include 'includes/alerts/alert_success.html' %}
-      {% endif %}
-
+        {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}
+          {% include 'includes/alerts/alert_error.html' %}
+        {% endif %}
+        {% if message.level == DEFAULT_MESSAGE_LEVELS.INFO %}
+          {% include 'includes/alerts/alert_info.html' %}
+        {% endif %}
+        {% if message.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %}
+          {% include 'includes/alerts/alert_success.html' %}
+        {% endif %}
+        {% if message.level == DEFAULT_MESSAGE_LEVELS.WARNING %}
+          {% include 'includes/alerts/alert_warning.html' %}
+        {% endif %}
       {% endfor %}
   </div>
   {% endif %}
