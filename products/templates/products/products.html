@@ -60,7 +60,7 @@
                             <div class="card h-100 border-0">
                                 {% if product.image1 %}
                                 <a href="{% url 'product_detail' product.id %}">
-                                    <img class="card-img-top img-fluid" src="{{ product.image1.url }}" alt="{{ product.name }}">
+                                    <img class="card-img-top img-fluid" src="{{ product.image1 }}" alt="{{ product.name }}">
                                 </a>
                                 {% else %}
                                 <a href="{% url 'product_detail' product.id %}">
@@ -80,11 +80,6 @@
                                                     <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
                                                 </a>
                                             </p>
-                                            {% endif %}
-                                            {% if product.rating %}
-                                                <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
-                                            {% else %}
-                                                <small class="text-muted">No Rating</small>
                                             {% endif %}
                                         </div>
                                     </div>

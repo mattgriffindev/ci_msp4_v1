@@ -1,34 +1,113 @@
-[
-  {
-    "pk": 1,
-    "model": "products.category",
-    "fields": {
-      "name": "bedroom",
-      "friendly_name": "Bedroom"
-    }
-  },
-  {
-    "pk": 2,
-    "model": "products.category",
-    "fields": {
-      "name": "living_room",
-      "friendly_name": "Living Room"
-    }
-  },
-  {
-    "pk": 3,
-    "model": "products.category",
-    "fields": {
-      "name": "kitchen_dining",
-      "friendly_name": "Kitchen & Dining"
-    }
-  },
-  {
-    "pk": 4,
-    "model": "products.category",
-    "fields": {
-      "name": "bathroom",
-      "friendly_name": "Bathroom"
-    }
+[{
+  "pk": 1,
+  "model": "products.category",
+  "fields": {
+    "name": "coffee_tables",
+    "friendly_name": "Coffee Tables"
   }
-]
+}, {
+  "pk": 2,
+  "model": "products.category",
+  "fields": {
+    "name": "side_tables_cabinets",
+    "friendly_name": "Side Tables and Cabinets"
+  }
+}, {
+  "pk": 3,
+  "model": "products.category",
+  "fields": {
+    "name": "dining_tables_chairs",
+    "friendly_name": "Dining Tables and Chairs"
+  }
+}, {
+  "pk": 4,
+  "model": "products.category",
+  "fields": {
+    "name": "candleholders_lanterns",
+    "friendly_name": "Candleholders and Lanterns"
+  }
+}, {
+  "pk": 5,
+  "model": "products.category",
+  "fields": {
+    "name": "decorative_bowls_platters",
+    "friendly_name": "Decorative Bowls and Platters"
+  }
+}, {
+  "pk": 6,
+  "model": "products.category",
+  "fields": {
+    "name": "soft_furnishings",
+    "friendly_name": "Soft Furnishings"
+  }
+}, {
+  "pk": 7,
+  "model": "products.category",
+  "fields": {
+    "name": "sculptures_decorative_objectives",
+    "friendly_name": "Sculptures and Decorative Objects"
+  }
+}, {
+  "pk": 8,
+  "model": "products.category",
+  "fields": {
+    "name": "mirrors",
+    "friendly_name": "Mirrors"
+  }
+}, {
+  "pk": 9,
+  "model": "products.category",
+  "fields": {
+    "name": "wall_art",
+    "friendly_name": "Wall Art"
+  }
+}, {
+  "pk": 10,
+  "model": "products.category",
+  "fields": {
+    "name": "canvas_prints",
+    "friendly_name": "Canvas Prints"
+  }
+}, {
+  "pk": 11,
+  "model": "products.category",
+  "fields": {
+    "name": "dining_tableware",
+    "friendly_name": "Dining and Tableware"
+  }
+}, {
+  "pk": 12,
+  "model": "products.category",
+  "fields": {
+    "name": "glassware",
+    "friendly_name": "Glassware"
+  }
+}, {
+  "pk": 13,
+  "model": "products.category",
+  "fields": {
+    "name": "kitchenware",
+    "friendly_name": "Kitchenware"
+  }
+}, {
+  "pk": 14,
+  "model": "products.category",
+  "fields": {
+    "name": "planters",
+    "friendly_name": "Planters"
+  }
+}, {
+  "pk": 15,
+  "model": "products.category",
+  "fields": {
+    "name": "outdoor_decor",
+    "friendly_name": "Outdoor Decor"
+  }
+}, {
+  "pk": 16,
+  "model": "products.category",
+  "fields": {
+    "name": "christmas",
+    "friendly_name": "Christmas"
+  }
+}]
