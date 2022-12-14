@@ -1,8 +1,5 @@
-<div class="collapse navbar-collapse" id="navbarSupportedContent">
+<div class="collapse navbar-collapse bg-success justify-content-center" id="navbarSupportedContent">
     <ul class="navbar-nav mb-2 mb-lg-0">
-      <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="#">Home</a>
-      </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
           Furniture
@@ -12,29 +9,63 @@
           <li><a class="dropdown-item" href="{% url 'products' %}?category=side_tables_cabinets">Side Tables and Cabinets</a></li>
           <li><a class="dropdown-item" href="{% url 'products' %}?category=dining_tables_chairs">Dining Tables and Chairs</a></li>
           <li><hr class="dropdown-divider"></li>
-          <li><a class="dropdown-item" href="{% url 'products' %}">All departments</a></li>
+          <li><a class="dropdown-item" href="{% url 'products' %}?category=coffee_tables,side_tables_cabinets,dining_tables_chairs">All Furniture</a></li>
         </ul>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          Link
+          Home Decor
         </a>
         <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#">Link</a></li>
-          <li><a class="dropdown-item" href="#">Link</a></li>
+          <li><a class="dropdown-item" href="{% url 'products' %}?category=candleholders_lanterns">Candleholders and Lanterns</a></li>
+          <li><a class="dropdown-item" href="{% url 'products' %}?category=decorative_bowls_platters">Decorative Bowls and Platters</a></li>
+          <li><a class="dropdown-item" href="{% url 'products' %}?category=soft_furnishings">Soft Furnishings</a></li>
+          <li><a class="dropdown-item" href="{% url 'products' %}?category=sculptures_decorative_objects">Sculptures and Decorative Objects</a></li>
           <li><hr class="dropdown-divider"></li>
-          <li><a class="dropdown-item" href="#">Link</a></li>
+          <li><a class="dropdown-item" href="{% url 'products' %}?category=candleholders_lanterns,decorative_bowls_platters,soft_furnishings,sculptures_decorative_objectis">All Home Decor</a></li>
         </ul>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          Link
+          Wall Art & Clocks
         </a>
         <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#">Link</a></li>
-          <li><a class="dropdown-item" href="#">Link</a></li>
+          <li><a class="dropdown-item" href="{% url 'products' %}?category=mirrors">Mirrors</a></li>
+          <li><a class="dropdown-item" href="{% url 'products' %}?category=wall_art">Wall Art</a></li>
+          <li><a class="dropdown-item" href="{% url 'products' %}?category=canvas_prints">Canvas Prints</a></li>
           <li><hr class="dropdown-divider"></li>
-          <li><a class="dropdown-item" href="#">Link</a></li>
+          <li><a class="dropdown-item" href="{% url 'products' %}?category=mirrors,wall_art,canvas_prints">All Wall Art & Clocks</a></li>
+        </ul>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Kitchenware & Dining
+        </a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="{% url 'products' %}?category=dining_tableware">Dining and Tableware</a></li>
+          <li><a class="dropdown-item" href="{% url 'products' %}?category=glassware">Glassware</a></li>
+          <li><a class="dropdown-item" href="{% url 'products' %}?category=kitchenware">Kitchenware</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="{% url 'products' %}?category=dining_tableware,glassware,kitchenware">All Kitchen & Dining</a></li>
+        </ul>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Outdoor & Conservatory
+        </a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="{% url 'products' %}?category=planters">Planters</a></li>
+          <li><a class="dropdown-item" href="{% url 'products' %}?category=outdoor_decor">Outdoor Decor</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="{% url 'products' %}?category=planters,outdoor_decor">All Outdoor & Conservatory</a></li>
+        </ul>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Christmas
+        </a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="{% url 'products' %}?category=christmas">All Christmas</a></li>
         </ul>
       </li>
     </ul>
