@@ -130,7 +130,7 @@
   <!--/navbar-->
 
   {% if messages %}
-  <div class="alert-container">
+  <div class="alert-container w-sm-100 w-md-25">
       {% for message in messages %}
         {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}
           {% include 'includes/alerts/alert_error.html' %}

@@ -154,13 +154,26 @@ li,
 	width: 100%;
   }
 
-/* ---------------------------------------------------------bootstrap-toasts-*/
+/* ---------------------------------------------------------bootstrap-alerts-*/
 
 .alert-container {
-    display:flex;
-	justify-content: center;
+	position: fixed;
+    top: 10%;
+    right: 0;
+
+	
+
+	height: 20rem;
+	overflow-x: hidden;
+	overflow-y: auto;
     z-index: 99999999999;
 }
+
+/* .bag-notification-wrapper {
+    height: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
+} */
 
 /*--------------------------------------------------------------------footer-*/
 
@@ -243,3 +256,11 @@ li,
 
 
 
+@media (min-width: 768px) {
+	.w-md-25 {
+	  width: 25% !important;
+	}
+	.h-md-75 {
+	  height: 25% !important;
+	}
+  }
