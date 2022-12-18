@@ -1,7 +1,14 @@
-<div class="alert bg-white border rounded-0 alert-dismissible fade show" role="alert">
-    <i class="fas fa-times-circle text-danger"></i>
-    <strong class="text-danger">Error!</strong>
-    <hr>
-    {{ message }}
-    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+        <div class="modal-header">
+            <i class="fas fa-times-circle text-danger"></i>
+            <h5 class="modal-title text-danger" id="staticBackdropLabel">Error!</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            {{ message }}  
+        </div>
+        <div class="modal-footer">
+        </div>
+    </div>
 </div>

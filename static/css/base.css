@@ -154,26 +154,9 @@ li,
 	width: 100%;
   }
 
-/* ---------------------------------------------------------bootstrap-alerts-*/
+/* ---------------------------------------------------------bootstrap-modals-*/
 
-.alert-container {
-	position: fixed;
-    top: 10%;
-    right: 0;
 
-	
-
-	height: 20rem;
-	overflow-x: hidden;
-	overflow-y: auto;
-    z-index: 99999999999;
-}
-
-/* .bag-notification-wrapper {
-    height: 100px;
-    overflow-x: hidden;
-    overflow-y: auto;
-} */
 
 /*--------------------------------------------------------------------footer-*/
 
