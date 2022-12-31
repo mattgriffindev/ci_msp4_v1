@@ -184,7 +184,7 @@ li,
 	position: relative;
 	bottom: 0;
 	color: var(--white);
-	background-color: var(--black);
+	background-color: var(--dark-color);
 }
 
 #footer ul {
@@ -219,8 +219,15 @@ li,
 	background-color: var(--white);
 }
 
+#footer .card-body {
+	padding: 0;
+	background: inherit;
+    border: none;
+}
+
 .social-media-icon {
-	margin-right: 1.5rem;
+	padding-left: 5px;
+    padding-right: 5px;
 	color: inherit;
 	font-size: 1.25rem;
 }
@@ -229,8 +236,15 @@ li,
 	font-weight: 500;
 }
 
-.signature {
-	font-family: var(--signature);
+.mobile-footer-collapse {
+	background: inherit;
+    border: none;
+    color: inherit;
+}
+
+.mobile-footer-collapse h5 {
+	align-items: center;
+    display: flex;
 }
 
 .hvr-pulse:hover {
@@ -347,5 +361,9 @@ li,
 @media (min-width: 768px) {
 	.w-md-25 {
 		width: 25% !important;
+	}
+
+	.w-md-50 {
+		width: 50% !important;
 	}
 }
