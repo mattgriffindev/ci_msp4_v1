@@ -1,18 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Source+Sans+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inspiration&family=WindSong&display=swap');
 
 :root {
-	--brand-color: black;
+	--brand-color: #99A2C5;
+	--dark-color: #30343F;
+	--mid-color: #D0C9E2;
+	--light-color: #FFFFFF;
 	--accent-color: green;
-	--light-color: yellow;
-	--mid-color: blue;
-	--dark-color: #111;
 	--white: #FFF;
 	--black: #111;
 	--heart: #ffb3be;
 
 	--brand-font: 'Inspiration', cursive;
-	--primary-font: 'Source Sans Pro', sans-serif;
+	--primary-font: 'Roboto', sans-serif;
 }
 
 * {
@@ -58,7 +58,7 @@ li,
 }
 
 .search-icon {
-	font-size: 1.75rem;
+	font-size: 1.5rem;
 }
 
 .account-icon {
@@ -102,6 +102,14 @@ li,
 	border-radius: 50px;
 }
 
+.navbar {
+	background-color: var(--mid-color);
+}
+
+.navbar-nav li {
+	font-size: 1rem;
+}
+
 .navbar-toggler {
 	border: 0;
 }
@@ -110,8 +118,8 @@ li,
 
 
 .hero-container {
-	height: 32rem;
-	background-color: cornflowerblue;
+	height: 28rem;
+	background-color: var(--light-color);
 }
 
 .hero-carousel {
@@ -120,7 +128,7 @@ li,
 
 .carousel-item {
 	position: relative;
-	height: 32rem;
+	height: 28rem;
 }
 
 .carousel-item img {
@@ -128,19 +136,18 @@ li,
 	width: auto;
 	object-fit: cover;
 	object-position: 100% 50%;
-
 }
 
 .carousel-indicators [data-bs-target] {
-	height: 0.75rem;
-	width: 0.75rem;
+	height: 0.5rem;
+	width: 0.7rem;
 	background-color: transparent;
-	border: 1px solid black;
+	border: 1px solid var(--dark-color);
 	border-radius: 50%;
 }
 
 .carousel-indicators .active {
-	background-color: black;
+	background-color: var(--dark-color);
 }
 
 /*--------------------------------------------------------------index-content-*/
