@@ -45,11 +45,27 @@ li,
 	cursor: pointer;
 }
 
-
-.secondaryAction {
-	background: green;
-	border: 1px solid;
+/* buttons */
+.btn-light {
+	width: 100%;
+	color: var(--dark-color);
+	background-color: transparent;
+	border: 1px solid var(--dark-color);
 	border-radius: 50px;
+}
+
+.btn-dark {
+	width: 100%;
+	color: var(--white);
+	background-color: var(--dark-color);
+	border: 1px solid var(--dark-color);
+	border-radius: 50px;
+}
+
+/* page header */
+.page-title-container {
+	color: var(--white);
+	background-color: var(--brand-color);
 }
 
 /*--------------------------------------------------------------------header-*/
@@ -185,6 +201,17 @@ li,
 	width: 100%;
 }
 
+.feature-img {
+	position: relative;
+}
+
+.test {
+	position: absolute;
+	top: 50%;
+	left: 10%;
+	color: hotpink;
+}
+
 /* ---------------------------------------------------------bootstrap-modals-*/
 
 
@@ -260,6 +287,23 @@ li,
 
 .hvr-pulse:hover {
 	color: var(--heart);
+}
+
+/*-------------------------------------------------------------------products-*/
+
+.badge {
+	margin: 0.25rem 0;
+	color: black;
+    font-size: 1rem;
+    border: 1px solid green;
+    border-radius: 50px;
+}
+
+.img-thumbnail {
+	height: 5rem;
+	width: 5rem;
+	border: none;
+	cursor: pointer;
 }
 
 /*----------------------------------------------------allauth-form-formatting-*/
@@ -349,26 +393,6 @@ li,
 
 /*-------------------------------------------------------------media-queries-*/
 
-
-
-
-
-
-
-.feature-img {
-	position: relative;
-}
-
-.test {
-	position: absolute;
-	top: 50%;
-	left: 10%;
-	color: hotpink;
-}
-
-
-
-
 @media (min-width: 768px) {
 	.w-md-25 {
 		width: 25% !important;
@@ -381,14 +405,4 @@ li,
 
 
 
-.page-title-container {
-	background-color: var(--brand-color);
-}
 
-.badge {
-	margin: 0.25rem 0;
-	color: black;
-    font-size: 1rem;
-    border: 1px solid green;
-    border-radius: 50px;
-}

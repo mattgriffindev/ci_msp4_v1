@@ -2,44 +2,47 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
+<div class="container-fluid page-title-container py-4 px-0 px-lg-5">
+    <div class="row">
+        <div class="text-center">
+            <h2>{{ product.name }}</h2>
         </div>
     </div>
+</div>
 {% endblock %}
 
 {% block content %}
     <div class="container-fluid">
         <div class="row">
-            <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
+            <div class="col-12 col-md-6 col-lg-4 offset-lg-1">
                 <div class="image-container my-5">
                     {% if product.image1 %}
                         <a href="" target="_blank">
-                            <img class="card-img-top img-fluid" src="{{ product.image1.url }}" alt="{{ product.name }}">
+                            <img id="product-img" class="card-img-top img-fluid" src="{{ product.image1.url }}" alt="{{ product.name }}">
                         </a>
                         {% else %}
                         <a href="">
                             <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}/media/noimage.png" alt="{{ product.name }}">
                         </a>
                     {% endif %}
+                    {% if product.image2 %}
+                    <div class="image-container text-center mt-3">
+                        <img src="{{ product.image1.url }}" class="img-thumbnail" alt="{{ product.name }}" onclick="productImage1()">
+                        <img src="{{ product.image2.url }}" class="img-thumbnail" alt="{{ product.name }}" onclick="productImage2()">
+                    </div>
+                    {% endif %}
                 </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-4">
+            <div class="col-12 col-md-6 col-lg-5">
                 <div class="product-details-container mb-5 mt-md-5">
                     <p class="mb-0">{{ product.name }}</p>
                     <p class="lead mb-0 text-left font-weight-bold">£{{ product.price }}</p>
                     {% if product.category %}
                     <p class="small mt-1 mb-0">
                         <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
-                            <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
+                            <i class="fas fa-tag me-1"></i>{{ product.category.friendly_name }}
                         </a>
                     </p>
-                    {% endif %}
-                    {% if product.rating %}
-                        <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
-                    {% else %}
-                        <small class="text-muted">No Rating</small>
                     {% endif %}
                     {% if request.user.is_superuser %}
                         <small class="ml-3">
@@ -75,14 +78,18 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-12">
-                                <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 mt-5">
-                                    <span class="icon">
-                                        <i class="fas fa-chevron-left"></i>
-                                    </span>
-                                    <span class="text-uppercase">Keep Shopping</span>
-                                </a>
-                                <input type="submit" class="btn rounded-0 text-uppercase mt-5" value="Add to Bag">
+                            <div class="row">
+                                <div class="col-12 col-md-6 text-center">
+                                    <a href="{% url 'products' %}" class="btn btn-light mt-4 mt-md-5">
+                                        <span class="icon">
+                                            <i class="fas fa-chevron-left"></i>
+                                        </span>
+                                        <span>Keep Shopping</span>
+                                    </a>
+                                </div>
+                                <div class="col-12 col-md-6 text-center">
+                                    <input type="submit" class="btn btn-dark mt-3 mt-md-5" value="Add to Bag">
+                                </div>
                             </div>
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         </div>
@@ -95,5 +102,14 @@
 
 {% block postloadjs %}
 {{ block.super }}
+<script>
+function productImage1() {
+    document.getElementById("product-img").src = "{{ product.image1.url }}";
+  }
+
+function productImage2() {
+    document.getElementById("product-img").src = "{{ product.image2.url }}";
+  }
+</script>
 {% include 'products/includes/quantity_input_script.html' %}
 {% endblock %}
