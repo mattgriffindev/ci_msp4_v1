@@ -378,3 +378,17 @@ li,
 		width: 50% !important;
 	}
 }
+
+
+
+.page-title-container {
+	background-color: var(--brand-color);
+}
+
+.badge {
+	margin: 0.25rem 0;
+	color: black;
+    font-size: 1rem;
+    border: 1px solid green;
+    border-radius: 50px;
+}
