@@ -45,6 +45,13 @@ li,
 	cursor: pointer;
 }
 
+
+.secondaryAction {
+	background: green;
+	border: 1px solid;
+	border-radius: 50px;
+}
+
 /*--------------------------------------------------------------------header-*/
 
 .brand {
