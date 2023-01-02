@@ -3,9 +3,11 @@
 {% load bag_tools %}
 
 {% block page_header %}
-<div class="container header-container">
+<div class="container-fluid page-title-container py-4 px-0 px-lg-5">
     <div class="row">
-        <div class="col"></div>
+        <div class="text-center">
+            <h2>Shopping Bag</h2>
+        </div>
     </div>
 </div>
 {% endblock %}
@@ -14,48 +16,41 @@
 <div class="container mb-2">
     <div class="row">
         <div class="col">
-            <hr>
-            <h2 class="logo-font mb-4">Shopping Bag</h2>
-            <hr>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col">
             {% if bag_items %}
-            <div class="table-responsive rounded">
-                <table class="table table-sm table-borderless">
-                    <thead class="text-black">
-                        <tr>
-                            <th scope="col">Product Info</th>
+            <div class="table-responsive">
+                <table class="table table-sm table-borderless mt-2">
+                    <thead>
+                        <tr class="hr-bag">
+                            <th scope="col">Product</th>
                             <th scope="col"></th>
-                            <th scope="col">Price</th>
-                            <th scope="col">Qty</th>
-                            <th scope="col">Subtotal</th>
+                            <th class="text-center" scope="col">Price</th>
+                            <th class="text-center" scope="col">Qty</th>
+                            <th class="text-end" scope="col">Subtotal</th>
                         </tr>
                     </thead>
                     {% for item in bag_items %}
-                    <tr>
+                    <tr class="hr-bag">
                         <td class="p-3 w-25">
                             {% if item.product.image1 %}
-                            <img class="img-fluid rounded" src="{{ item.product.image1.url }}"
+                            <img class="img-fluid" src="{{ item.product.image1.url }}"
                                 alt="{{ item.product.name }}">
                             {% else %}
-                            <img class="img-fluid rounded" src="{{ MEDIA_URL }}noimage.png"
+                            <img class="img-fluid" src="{{ MEDIA_URL }}noimage.png"
                                 alt="{{ item.product.name }}">
                             {% endif %}
                         </td>
-                        <td class="py-3">
+                        <td class="py-3 align-middle">
                             <p class="my-0"><strong>{{ item.product.name }}</strong></p>
                             <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
                         </td>
-                        <td class="py-3">
+                        <td class="py-3 align-middle">
                             <p class="my-0">£{{ item.product.price }}</p>
                         </td>
-                        <td class="py-3 w-25">
+                        <td class="py-3 align-middle w-25">
                             <form class="form update-form" method="POST" action="{% url 'adjust_bag' item.item_id %}">
                                 {% csrf_token %}
-                                <div class="form-group">
-                                    <div class="input-group">
+                                <div class="form-group d-flex justify-content-center">
+                                    <div class="input-group w-50">
                                         <div class="input-group-prepend">
                                             <button class="decrement-qty btn btn-sm" data-item_id="{{ item.item_id }}"
                                                 id="decrement-qty_{{ item.item_id }}">
@@ -78,17 +73,19 @@
                                     </div>
                                 </div>
                             </form>
-                            <a class="update-link text-info"><small>Update</small></a>
-                            <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}"
+                            <span class="d-flex justify-content-center mt-3">
+                            <a class="update-link btn btn-light me-1"><small>Update</small></a>
+                            <a class="remove-item btn btn-dark float-right ms-1" id="remove_{{ item.item_id }}"
                                 data-item_id="{{ item.item_id }}"><small>Remove</small></a>
+                            </span>
                         </td>
-                        <td class="py-3">
+                        <td class="py-3 align-middle text-end">
                             <p class="my-0">£{{ item.product.price | calc_subtotal:item.quantity }}</p>
                         </td>
                     </tr>
                     {% endfor %}
                     <tr>
-                        <td colspan="5" class="pt-5 text-right">
+                        <td colspan="5" class="pt-5 text-end">
                             <h6><strong>Bag Total: £{{ total|floatformat:2 }}</strong></h6>
                             <h6>Delivery: £{{ delivery|floatformat:2 }}</h6>
                             <h4 class="mt-4"><strong>Grand Total: £{{ grand_total|floatformat:2 }}</strong></h4>
@@ -101,15 +98,15 @@
                         </td>
                     </tr>
                     <tr>
-                        <td colspan="5" class="text-right">
-                            <a href="{% url 'products' %}" class="btn rounded-0 btn-lg">
+                        <td colspan="5" class="text-end">
+                            <a href="{% url 'products' %}" class="btn btn-light btn-lg me-1">
                                 <span class="icon">
                                     <i class="fas fa-chevron-left"></i>
                                 </span>
-                                <span class="text-uppercase">Keep Shopping</span>
+                                <span>Keep Shopping</span>
                             </a>
-                            <a href="{% url 'checkout' %}" class="btn rounded-0 btn-lg">
-                                <span class="text-uppercase">Secure Checkout</span>
+                            <a href="{% url 'checkout' %}" class="btn btn-dark btn-lg ms-1">
+                                <span>Secure Checkout</span>
                                 <span class="icon">
                                     <i class="fas fa-lock"></i>
                                 </span>

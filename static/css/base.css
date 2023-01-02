@@ -47,7 +47,6 @@ li,
 
 /* buttons */
 .btn-light {
-	width: 100%;
 	color: var(--dark-color);
 	background-color: transparent;
 	border: 1px solid var(--dark-color);
@@ -55,7 +54,6 @@ li,
 }
 
 .btn-dark {
-	width: 100%;
 	color: var(--white);
 	background-color: var(--dark-color);
 	border: 1px solid var(--dark-color);
@@ -306,6 +304,12 @@ li,
 	cursor: pointer;
 }
 
+/*------------------------------------------------------------------------bag-*/
+
+.hr-bag{
+	border-bottom: 1px solid var(--brand-color);
+}
+
 /*----------------------------------------------------allauth-form-formatting-*/
 
 .allauth-form-inner-content p {
@@ -402,7 +406,4 @@ li,
 		width: 50% !important;
 	}
 }
-
-
-
 
