@@ -8,7 +8,7 @@
         <div class="modal-body">
             {{ message }}
             {% if grand_total and not on_profile_page %}
-            <p class="py-1">Your Bag ({{ product_count }})</p>
+            <p class="py-1"><strong>Items in your bag: {{ product_count }}</strong></p>
             <div class="bag-notification-wrapper">
                 {% for item in bag_items %}
                 <div class="row">
@@ -19,9 +19,11 @@
                         <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}">
                         {% endif %}
                     </div>
-                    <div class="col-9">
-                        <p class="my-0"><strong>{{ item.product.name }}</strong></p>
-                        <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
+                    <div class="col-9 vcenter">
+                        <p class="my-0"><strong>{{ item.product.name }}</strong>
+                        <br>
+                        <span class="my-0 small text-muted">Qty: {{ item.quantity }}</span>
+                        </p>
                     </div>
                 </div>
                 {% endfor %}
@@ -44,8 +46,8 @@
                 Spend <strong>£{{ free_delivery_delta }}</strong> more to get free next day delivery!
             </p>
             {% endif %}
-            <a href="{% url 'view_bag' %}" class="btn btn-block rounded-0">
-                <span class="text-uppercase">Go To Secure Checkout</span>
+            <a href="{% url 'view_bag' %}" class="btn btn-dark">
+                <span>Go To Secure Checkout</span>
                 <span class="icon">
                     <i class="fas fa-lock"></i>
                 </span>

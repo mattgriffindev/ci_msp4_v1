@@ -66,6 +66,12 @@ li,
 	background-color: var(--brand-color);
 }
 
+/* vertical center*/
+.vcenter {
+	display:flex;
+	align-items: center;
+}
+
 /*--------------------------------------------------------------------header-*/
 
 .brand {
@@ -292,8 +298,8 @@ li,
 .badge {
 	margin: 0.25rem 0;
 	color: black;
-    font-size: 1rem;
-    border: 1px solid green;
+    font-size: 1.25rem;
+    border: 1px solid var(--brand-color);
     border-radius: 50px;
 }
 

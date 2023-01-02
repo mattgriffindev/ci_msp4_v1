@@ -2,8 +2,7 @@
 .stripe-style-input {
   box-sizing: border-box;
   height: 40px;
-  padding: 10px 12px;
-  border: 1px solid transparent;
+  border: 1px solid var(--dark-color);
   border-radius: 0px;
   background-color: white;
   box-shadow: 0 1px 3px 0 #e6ebf1;
@@ -33,7 +32,7 @@
 #payment-form .form-control,
 #card-element {
   color: #000;
-  border: 1px solid #000;
+  border: 1px solid var(--dark-color);
 }
 
 select,
@@ -53,7 +52,8 @@ select option[value=""] {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(20, 04, 84, .5);
+  background: var(--brand-color);
+  opacity: 0.5;
   z-index: 9999;
 }
 
@@ -63,4 +63,8 @@ select option[value=""] {
   justify-content: center;
   margin: 0;
   height: 100%;
+}
+
+.card-field {
+  padding: 10px 12px;
 }

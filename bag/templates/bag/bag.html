@@ -43,10 +43,10 @@
                             <p class="my-0"><strong>{{ item.product.name }}</strong></p>
                             <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
                         </td>
-                        <td class="py-3 align-middle">
+                        <td class="py-3 align-middle text-center">
                             <p class="my-0">£{{ item.product.price }}</p>
                         </td>
-                        <td class="py-3 align-middle w-25">
+                        <td class="py-3 align-middle text-center w-25">
                             <form class="form update-form" method="POST" action="{% url 'adjust_bag' item.item_id %}">
                                 {% csrf_token %}
                                 <div class="form-group d-flex justify-content-center">
@@ -116,13 +116,15 @@
                 </table>
             </div>
             {% else %}
-            <p class="lead mb-5">Your bag is empty.</p>
-            <a href="{% url 'products' %}" class="btn rounded-0 btn-lg">
-                <span class="icon">
-                    <i class="fas fa-chevron-left"></i>
-                </span>
-                <span class="text-uppercase">Keep Shopping</span>
-            </a>
+            <div class="text-center">
+                <p class="lead my-5">Your bag is empty.</p>
+                <a href="{% url 'products' %}" class="btn btn-light btn-lg">
+                    <span class="icon">
+                        <i class="fas fa-chevron-left"></i>
+                    </span>
+                    <span>Keep Shopping</span>
+                </a>
+            </div>
             {% endif %}
         </div>
     </div>
