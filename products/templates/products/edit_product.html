@@ -2,26 +2,25 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
+<div class="container-fluid page-title-container py-4 px-0 px-lg-5">
+    <div class="row">
+        <div class="text-center">
+            <h2>Product Management</h2>
         </div>
     </div>
+</div>
 {% endblock %}
 
 {% block content %}
     <div class="container">
-        <div class="row">
-            <div class="col-12 col-md-6">
-                <hr>
-                <h2 class="logo-font mb-4">Product Management</h2>
-                <h5 class="text-muted">Edit a Product</h5>
+        <div class="row mt-3">
+            <div class="col">
+                <p class="lead">Edit product</p>
                 <hr>
             </div>
         </div>
-
         <div class="row">
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-6 offset-md-3">
                 <form method="POST" action="{% url 'edit_product' product.id %}" class="form mb-2" enctype="multipart/form-data">
                     {% csrf_token %}
                     {% for field in form %}
@@ -31,9 +30,9 @@
                             {{ field }}
                         {% endif %}
                     {% endfor %}
-                    <div class="text-right">
-                        <a class="btn btn-outline-black rounded-0" href="{% url 'products' %}">Cancel</a>
-                        <button class="btn btn-black rounded-0" type="submit">Update Product</button>
+                    <div class="text-center">
+                        <a class="btn btn-light" href="{% url 'products' %}">Cancel</a>
+                        <button class="btn btn-dark" type="submit">Add Product</button>
                     </div>
                 </form>
             </div>            

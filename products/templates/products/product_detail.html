@@ -16,7 +16,7 @@
     <div class="row">
         <div class="col-12 col-md-6 col-lg-4 offset-lg-1">
             <div class="image-container mt-5">
-                {% if product.image1 %}
+                {% if product.image1.url %}
                 <a href="" target="_blank">
                     <img id="product-img" class="card-img-top img-fluid" src="{{ product.image1.url }}"
                         alt="{{ product.name }}">
@@ -28,14 +28,7 @@
                 </a>
                 {% endif %}
             </div>
-            {% if product.image2 %}
-            <div class="image-container text-center mt-2">
-                <img src="{{ product.image1.url }}" class="img-thumbnail" alt="{{ product.name }}"
-                    onclick="productImage1()">
-                <img src="{{ product.image2.url }}" class="img-thumbnail" alt="{{ product.name }}"
-                    onclick="productImage2()">
-            </div>
-            {% endif %}
+            
         </div>
         <div class="col-12 col-md-6 col-lg-5">
             <div class="product-details-container mb-5 mt-md-5">
@@ -49,10 +42,10 @@
                 </p>
                 {% endif %}
                 {% if request.user.is_superuser %}
-                <small class="ml-3">
-                    <a href="{% url 'edit_product' product.id %}">Edit</a> |
-                    <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
-                </small>
+                <span class="d-flex justify-content-start mt-3">
+                    <a class="update-link btn btn-sm btn-light me-1" href="{% url 'edit_product' product.id %}">Edit</a>
+                    <a class="remove-item btn btn-sm btn-dark float-right ms-1" href="{% url 'delete_product' product.id %}">Remove</a>
+                </span>
                 {% endif %}
                 <p class="mt-3">{{ product.description }}</p>
                 <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
@@ -107,14 +100,6 @@
 
 {% block postloadjs %}
 {{ block.super }}
-<script>
-    function productImage1() {
-        document.getElementById("product-img").src = "{{ product.image1.url }}";
-    }
-
-    function productImage2() {
-        document.getElementById("product-img").src = "{{ product.image2.url }}";
-    }
-</script>
 {% include 'products/includes/quantity_input_script.html' %}
+
 {% endblock %}
