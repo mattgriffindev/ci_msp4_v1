@@ -41,6 +41,7 @@
                     </a>
                 </p>
                 {% endif %}
+                <a class="btn btn-light me-1" href="{% url 'add_review' product.id %}">Review</a>
                 {% if request.user.is_superuser %}
                 <span class="d-flex justify-content-start mt-3">
                     <a class="update-link btn btn-sm btn-light me-1" href="{% url 'edit_product' product.id %}">Edit</a>
