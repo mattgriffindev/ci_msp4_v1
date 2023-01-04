@@ -16,12 +16,12 @@
   <div class="row">REVIEWS</div>
   <div class="row">
   {% for review in reviews %}
-    {{ review.product.name }}
-    <img class="" src="{{ review.product.image1.url }}" alt="{{ review.product.name }}">
-    {{ review.name }}
-    {{ review.title }}
-    {{ review.body }}
-    {{ review.created_on}}
+    <p class="lead">{{ review.product.name }}</p>
+    <img class="img-thumbnail" src="{{ review.product.image1.url }}" alt="{{ review.product.name }}">
+    <p>{{ review.name }}</p>
+    <p>{{ review.title }}</p>
+    <p>{{ review.body }}</p>
+    <p>{{ review.created_on}}</p>
   {% endfor %}
   </div>
   <div class="row">END</div>

@@ -8,28 +8,31 @@ from django.contrib import messages
 def all_reviews(request):
     reviews = Review.objects.all()
 
+    template = 'reviews/reviews.html'
     context = {
         'reviews': reviews,
     }
-    return render(request, 'reviews/reviews.html', context)
+    return render(request, template, context)
 
 
 def add_review(request, id):
-    post = Product.objects.get(id=id)
+    reviews = Review.objects.all()
+    product = Product.objects.get(id=id)
     form = ReviewForm(request.POST or None)
+
     if form.is_valid():
         name = request.POST.get('name')
         title = request.POST.get('title')
         body = request.POST.get('body')
-        review = Review(name=name, title=title, body=body, product=post)
+        review = Review(name=name, title=title, body=body, product=product)
         review.save()
         messages.success(request, 'Successfully added a review!')
-    else:
-        messages.error(request, 'Failed to add review. Please ensure the form is valid.')
 
     template = 'reviews/add_review.html'
     form = ReviewForm()
     context = {
-        "form": form
+        'form': form,
+        'reviews': reviews,
+        'product': product,
     }
     return render(request, template, context)
