@@ -8,32 +8,28 @@ from django.contrib import messages
 def all_reviews(request):
     reviews = Review.objects.all()
 
-    return render(request, 'reviews/reviews.html')
+    context = {
+        'reviews': reviews,
+    }
+    return render(request, 'reviews/reviews.html', context)
 
 
-def add_review(request, product_id):
-    """ Edit a product in the store """
-    if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only store owners can do that.')
-        return redirect(reverse('home'))
-
-    product = get_object_or_404(Product, pk=product_id)
-    if request.method == 'POST':
-        form = ReviewForm(request.POST, request.FILES, instance=product)
-        if form.is_valid():
-            form.save()
-            messages.success(request, 'Successfully updated product!')
-            return redirect(reverse('product_detail', args=[product.id]))
-        else:
-            messages.error(request, 'Failed to update product. Please ensure the form is valid.')
+def add_review(request, id):
+    post = Product.objects.get(id=id)
+    form = ReviewForm(request.POST or None)
+    if form.is_valid():
+        name = request.POST.get('name')
+        title = request.POST.get('title')
+        body = request.POST.get('body')
+        review = Review(name=name, title=title, body=body, product=post)
+        review.save()
+        messages.success(request, 'Successfully added a review!')
     else:
-        form = ReviewForm(instance=product)
-        messages.info(request, f'You are editing {product.name}')
+        messages.error(request, 'Failed to add review. Please ensure the form is valid.')
 
     template = 'reviews/add_review.html'
+    form = ReviewForm()
     context = {
-        'form': form,
-        'product': product,
+        "form": form
     }
-
     return render(request, template, context)

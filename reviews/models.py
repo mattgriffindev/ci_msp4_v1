@@ -15,4 +15,4 @@ class Review(models.Model):
         ordering = ['created_on']
 
     def __str__(self):
-        return 'Review {} by {}'.format(self.body, self.name)
+        return self.product.name
