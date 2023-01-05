@@ -5,16 +5,6 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 
 
-def all_reviews(request):
-    reviews = Review.objects.all()
-
-    template = 'reviews/reviews.html'
-    context = {
-        'reviews': reviews,
-    }
-    return render(request, template, context)
-
-
 def add_review(request, id):
     reviews = Review.objects.all()
     product = Product.objects.get(id=id)
@@ -36,3 +26,16 @@ def add_review(request, id):
         'product': product,
     }
     return render(request, template, context)
+
+
+@login_required
+def delete_review(request, review_id):
+    """ Delete a review from the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
+    review = get_object_or_404(Review, pk=review_id)
+    review.delete()
+    messages.info(request, 'Review deleted!')
+    return redirect(reverse('products'))
