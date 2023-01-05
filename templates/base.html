@@ -68,8 +68,6 @@
         </a>
       </div>
       <div class="col-md-4 my-auto text-start text-md-end py-1 py-lg-0 d-none d-lg-block">
-
-
         <ul class="d-inline-flex text-center text-lg-end my-0">
           <li class="list-inline-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" id="user-options" data-bs-toggle="dropdown"
@@ -156,6 +154,9 @@
   <script type="text/javascript">
     $(document).ready(function () {
       $("#staticBackdrop").modal("show");
+    });
+    $(document).ready(function() {
+      $(".grid-img:eq(0)").addClass("fade-in");
     });
   </script>
   {% endblock %}

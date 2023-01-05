@@ -149,11 +149,11 @@ li,
 
 
 .hero-container {
-	height: 28rem;
+	/* height: 10rem; */
 	background-color: var(--light-color);
 }
 
-.hero-carousel {
+/* .hero-carousel {
 	padding: 0;
 }
 
@@ -179,6 +179,28 @@ li,
 
 .carousel-indicators .active {
 	background-color: var(--dark-color);
+} */
+
+.grid-img {
+	width: 100%;
+	height: auto;
+	margin-top: 8px;
+	object-fit: fill;
+	opacity: 0;
+}
+
+.grid-col {
+	padding: 0 4px;
+}
+
+.fade-in {
+	animation: fade-in 1s linear forwards;
+}
+
+@keyframes fade-in {
+	100% {
+		opacity: 1;
+	}
 }
 
 /*--------------------------------------------------------------index-content-*/
@@ -414,4 +436,3 @@ li,
 		width: 50% !important;
 	}
 }
-
