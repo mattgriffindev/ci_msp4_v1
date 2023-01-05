@@ -3,6 +3,7 @@ from .forms import ReviewForm
 from products.models import Product
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 
 
 def add_review(request, id):
