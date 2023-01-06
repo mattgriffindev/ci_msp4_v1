@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+<div class="container-fluid page-title-container py-4 px-0 px-lg-5">
+    <div class="row">
+        <div class="text-center">
+            <h2>Contact Us</h2>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row mt-3">
+        <div class="col-12 col-md-6 offset-md-3">
+            <p class="lead">We'd love to hear from you</p>
+            <table class="contact-info">
+                <tr>
+                    <td class="align-top"><i class="fas fa-map-marker-alt icon"></i></td>
+                    <td>84 Westgate St.<br>
+                        Cardiff<br>
+                        CF10 1NS</td>
+                </tr>
+                <tr>
+                    <td><i class="fas fa-phone-alt icon"></i></td>
+                    <td>0330 123 4567</td>
+                </tr>
+                <tr>
+                    <td><i class="fas fa-envelope icon"></i></td>
+                    <td><a href="mailto:matt.griffin@live.co.uk??subject=Mail from our site&body=Thank you for contacting us. Please let us know how we can help you...">info@paulreed.co.uk</a></td>
+                </tr>
+            </table>
+            <hr>
+            <p class="lead">Why not send us a message?</p>
+            <p>Simply fill in the form below and we'll get back to you<br>
+            <span class="text-danger">* Required</span></p>
+
+            <form id="contactForm" class="contact-form" onsubmit="return sendMail(this);">
+                <div class="form-group mb-4">
+                    <h6>Add your name<span class="text-danger">*</span></h6>
+                    <input type="text" class="form-control border-dark" name="name" id="name"
+                        required>
+                </div>
+                <div class="form-group mb-4">
+                    <h6>Add your email address<span class="text-danger">*</span></h6>
+                    <input type="email" class="form-control border-dark" name="email" id="email"
+                        required>
+                </div>
+                <div class="form-group mb-4">
+                    <h6>Add your phone number, if you want to</h6>
+                    <input type="text" class="form-control border-dark" name="phone" id="phone">
+                </div>
+                <div class="form-group mb-4">
+                    <h6>Add your message<span class="text-danger">*</span></h6>
+                    <textarea class="form-control border-dark" name="message" id="message" rows="3"
+                        required></textarea>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-lg btn-dark">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
