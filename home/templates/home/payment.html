@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+<div class="container-fluid page-title-container py-4 px-0 px-lg-5">
+    <div class="row">
+        <div class="text-center">
+            <h2>Payment Info</h2>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row mt-3">
+        <div class="col-12 col-md-6 offset-md-3">
+            <p class="lead">Money, Money, Money</p>
+            <h6>Payment Types</h6>
+            <p>We are happy for you to pay for the items you purchase in the way that suits you the best. You can use
+                all
+                the following payment types:</p>
+            <ul>
+                <li>Visa Debit / Credit</li>
+                <li>Visa Electron</li>
+                <li>Mastercard</li>
+                <li>Maestro International</li>
+            </ul>
+            <h6>When will I be charged for my order?</h6>
+            <p>If you use a credit or debit card you will usually see we authorise the payment to make sure that the
+                details are correct and the necessary funds are available when you place an order, however you will not
+                actually be charged until the item has been dispatched. If for any reason your order is cancelled the
+                authorisation payment may take up to 3 working days to be released. You may see that the money is gone
+                from
+                your account before the item has been dispatched, however please be aware that this is because the bank
+                has
+                set the funds aside for the payment and is holding the money in a virtual bank hold.</p>
+            <p>If for any reason you cancel the order before it has been shipped or you return the item after receipt we
+                will refund the money to you immediately, however it may take a few days to show in your account.</p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

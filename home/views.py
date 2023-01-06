@@ -33,6 +33,24 @@ def terms(request):
     return render(request, 'home/terms.html')
 
 
+def delivery(request):
+    """ A view that renders the delivery page """
+
+    return render(request, 'home/delivery.html')
+
+
+def returns(request):
+    """ A view that renders the returns page """
+
+    return render(request, 'home/returns.html')
+
+
+def payment(request):
+    """ A view that renders the payment & security page """
+
+    return render(request, 'home/payment.html')
+
+
 def privacy(request):
     """ A view that renders the privacy page """
 

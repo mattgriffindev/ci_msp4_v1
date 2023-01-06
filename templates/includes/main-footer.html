@@ -1,7 +1,7 @@
 <div class="col-6 d-none d-lg-block">
   <div class="row">
     <div class="col-6 text-end">
-      <h5>Paul Reed</h5>
+      <h5>Customer Info</h5>
       <ul>
         <li>
           <a href="{% url 'contact' %}">Contact Us</a>
@@ -18,19 +18,16 @@
       </ul>
     </div>
     <div class="col-6 text-end">
-      <h5>Heading</h5>
+      <h5>Orders</h5>
       <ul>
         <li>
-          <a href="">Link</a>
+          <a href="{% url 'delivery' %}">Delivery Info</a>
         </li>
         <li>
-          <a href="">Link</a>
+          <a href="{% url 'returns' %}">Returns Info</a>
         </li>
         <li>
-          <a href="">Link</a>
-        </li>
-        <li>
-          <a href="">Link</a>
+          <a href="{% url 'payment' %}">Payment Info</a>
         </li>
       </ul>
     </div>
