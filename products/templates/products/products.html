@@ -23,7 +23,7 @@
             {% for c in current_categories %}
             <a class="text-decoration-none" href="{% url 'products' %}?category={{ c.name }}">
                 <span
-                    class="p-2 badge">{{ c.friendly_name }}</span>
+                    class="p-2 badge badge-category">{{ c.friendly_name }}</span>
             </a>
             {% endfor %}
         </div>
@@ -57,12 +57,18 @@
                 <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                     <div class="card h-100 border-0">
                         {% if product.image1.url %}
-                        <a href="{% url 'product_detail' product.id %}">
-                            <img class="card-img-top img-fluid" src="{{ product.image1.url }}" alt="{{ product.name }}">
+                        <a href="{% url 'product_detail' product.id %}" class="border">
+                            {% if product.on_sale%}
+                                <span class="badge badge-sale-sm bg-danger">Sale</span>
+                            {% endif %}
+                                <img class="card-img-top img-fluid" src="{{ product.image1.url }}" alt="{{ product.name }}">
                         </a>
                         {% else %}
                         <a href="{% url 'product_detail' product.id %}">
-                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"
+                            {% if product.on_sale%}
+                                <span class="badge badge-sale-sm bg-danger">Sale</span>
+                            {% endif %}
+                                <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"
                                 alt="{{ product.name }}">
                         </a>
                         {% endif %}
@@ -72,7 +78,12 @@
                         <div class="card-footer bg-white pt-0 border-0 text-left">
                             <div class="row">
                                 <div class="col">
-                                    <p class="lead mb-0 text-left font-weight-bold">£{{ product.price }}</p>
+                                    {% if product.on_sale %}
+                                    <p><span class="mb-0 text-left text-danger text-decoration-line-through">£{{ product.price }}</span>&nbsp;
+                                        <span class="lead mb-0 text-left font-weight-bold">£{{ product.sale_price }}</span></p>
+                                    {% else %}
+                                        <p class="lead mb-0 text-left font-weight-bold">£{{ product.price }}</p>
+                                    {% endif %}
                                     {% if product.category %}
                                     <p class="small mt-1 mb-0">
                                         <a class="text-muted"

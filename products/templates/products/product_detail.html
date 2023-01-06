@@ -32,15 +32,19 @@
                 {% if product.image2 %}
                 <img id="thumbnail1" class="img-thumbnail" src="{{ product.image1.url }}" onclick="thumbnail1()" alt="{{ product.name }}">
                 <img id="thumbnail2" class="img-thumbnail" src="{{ product.image2.url }}" onclick="thumbnail2()" alt="{{ product.name }}">
-                {% else %}
-                <img class="img-thumbnail" src="https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_square.jpg" alt="{{ product.name }}">
                 {% endif %}
             </div>
         </div>
         <div class="col-12 col-md-6 col-lg-5">
             <div class="product-details-container mb-5 mt-md-5">
                 <p class="mb-0">{{ product.name }}</p>
-                <p class="lead mb-0 text-left font-weight-bold">£{{ product.price }}</p>
+                {% if product.on_sale %}
+                    <span class="badge badge-sale bg-danger">Sale</span>
+                    <p><span class="mb-0 text-left text-danger text-decoration-line-through">£{{ product.price }}</span>&nbsp;
+                    <span class="lead mb-0 text-left font-weight-bold">£{{ product.sale_price }}</span></p>
+                {% else %}
+                    <p class="lead mb-0 text-left font-weight-bold">£{{ product.price }}</p>
+                {% endif %}
                 {% if product.category %}
                 <p class="small mt-1 mb-0">
                     <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
@@ -158,5 +162,5 @@
 {% block postloadjs %}
 {{ block.super }}
 {% include 'products/includes/quantity_input_script.html' %}
-{% include 'products/includes/show_thumbnail_script.html' %}
+
 {% endblock %}

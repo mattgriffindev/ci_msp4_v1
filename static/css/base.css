@@ -37,6 +37,8 @@ li,
 	position: fixed;
 	bottom: 10px;
 	right: 10px;
+	z-index: 9999;
+	background: var(--white);
 }
 
 .btt-link,
@@ -201,7 +203,7 @@ li,
 }
 
 .fade-in {
-	animation: fade-in 2s linear forwards;
+	animation: fade-in 1s linear forwards;
 	/* animation-duration: 10s; */
 }
 
@@ -308,12 +310,32 @@ li,
 
 /*-------------------------------------------------------------------products-*/
 
-.badge {
+.badge-category {
 	margin: 0.25rem 0;
-	color: black;
+	color: var(--dark-color);
     font-size: 1rem;
     border: 1px solid var(--brand-color);
     border-radius: 50px;
+}
+
+.badge-sale {
+	width: 8rem;
+	margin: 0.25rem 0;
+	padding: 0.5rem;
+	color: var(--white);
+    font-size: 1.2rem;
+	font-weight: 600;
+    border-radius: 0;
+}
+
+.badge-sale-sm {
+	width: 4rem;
+	margin: 0.25rem 0;
+	padding: 0.5rem;
+	color: var(--white);
+    font-size: 1rem;
+	font-weight: 600;
+    border-radius: 0;
 }
 
 .img-thumbnail {
