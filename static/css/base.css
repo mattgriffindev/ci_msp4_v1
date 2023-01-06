@@ -200,7 +200,7 @@ li,
 }
 
 .fade-in {
-	animation: fade-in 1s linear forwards;
+	animation: fade-in 2s linear forwards;
 }
 
 @keyframes fade-in {
