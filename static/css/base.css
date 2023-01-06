@@ -191,6 +191,7 @@ li,
 .img-wrapper {
 	height: 28rem;
 	width: 100%;
+	position: relative;
 	margin-top: 8px;
     overflow: hidden;
 }
@@ -200,7 +201,7 @@ li,
 }
 
 .fade-in {
-	animation: fade-in 2s linear forwards;
+	animation: fade-in 1s ease-out forwards;
 }
 
 @keyframes fade-in {
@@ -212,22 +213,6 @@ li,
 	}
 }
 
-.hero-zoom {
-	animation: hero-zoom 5s;
-}
-
-@keyframes hero-zoom {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.1);
-    }
-	100% {
-        transform: scale(1);
-    }
-}
-
 /*--------------------------------------------------------------index-content-*/
 
 .card {
@@ -236,20 +221,6 @@ li,
 
 .feature-container {
 	background-color: var(--brand-color);
-}
-
-/* .center {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	width: 100%;
-} */
-
-.test {
-	position: absolute;
-	top: 50%;
-	left: 10%;
-	color: hotpink;
 }
 
 /* ---------------------------------------------------------bootstrap-modals-*/
@@ -450,3 +421,33 @@ li,
 		width: 50% !important;
 	}
 }
+
+
+.img-middle {
+	transition: .5s ease;
+	opacity: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	text-align: center;
+  }
+  
+.img {
+	transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+  .img-wrapper:hover .img {
+	opacity: 0.3;
+  }
+  
+  .img-wrapper:hover .img-middle {
+	opacity: 1;
+  }
+  
+  .img-text {
+	color: var(--dark-color);
+	font-size: 2rem;
+  }
