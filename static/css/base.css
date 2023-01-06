@@ -203,7 +203,7 @@ li,
 }
 
 .fade-in {
-	animation: fade-in 1s linear forwards;
+	animation: fade-in 1s ease-in-out forwards;
 	/* animation-duration: 10s; */
 }
 
@@ -221,13 +221,35 @@ li,
 
 /*--------------------------------------------------------------index-content-*/
 
-.card {
-	border-radius: unset;
+.img-middle {
+	transition: .5s ease;
+	opacity: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	text-align: center;
+  }
+  
+.img {
+	transition: .5s ease;
+  	backface-visibility: hidden;
 }
 
-.feature-container {
-	background-color: var(--brand-color);
-}
+  .img-wrapper:hover .img {
+	opacity: 0.3;
+  }
+  
+  .img-wrapper:hover .img-middle {
+	opacity: 1;
+  }
+  
+  .img-text {
+	color: var(--dark-color);
+	font-size: 2rem;
+  }
+
 
 /* ---------------------------------------------------------bootstrap-modals-*/
 
@@ -310,6 +332,11 @@ li,
 
 /*-------------------------------------------------------------------products-*/
 
+.card {
+	position: relative;
+	border-radius: unset;
+  }
+
 .badge-category {
 	margin: 0.25rem 0;
 	color: var(--dark-color);
@@ -319,6 +346,7 @@ li,
 }
 
 .badge-sale {
+	position: absolute;
 	width: 8rem;
 	margin: 0.25rem 0;
 	padding: 0.5rem;
@@ -329,6 +357,7 @@ li,
 }
 
 .badge-sale-sm {
+	position: absolute;
 	width: 4rem;
 	margin: 0.25rem 0;
 	padding: 0.5rem;
@@ -447,33 +476,4 @@ li,
 		width: 50% !important;
 	}
 }
-
-
-.img-middle {
-	transition: .5s ease;
-	opacity: 0;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	-ms-transform: translate(-50%, -50%);
-	text-align: center;
-  }
-  
-.img {
-	transition: .5s ease;
-  backface-visibility: hidden;
-}
-
-  .img-wrapper:hover .img {
-	opacity: 0.3;
-  }
-  
-  .img-wrapper:hover .img-middle {
-	opacity: 1;
-  }
-  
-  .img-text {
-	color: var(--dark-color);
-	font-size: 2rem;
-  }
+ 
