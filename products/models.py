@@ -22,6 +22,8 @@ class Product(models.Model):
     name = models.CharField(max_length=254)
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
+    on_sale = models.BooleanField(default=True)
+    sale_price = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
     image1 = models.ImageField(null=True, blank=True)
     image2 = models.ImageField(null=True, blank=True)
 

@@ -201,12 +201,16 @@ li,
 }
 
 .fade-in {
-	animation: fade-in 1s ease-out forwards;
+	animation: fade-in 2s linear forwards;
+	/* animation-duration: 10s; */
 }
 
 @keyframes fade-in {
 	0% {
-		transform: scale(0);
+		transform: scale(0.6);
+	}
+	80% {
+		transform: scale(1.1);
 	}
 	100% {
 		transform: scale(1);
