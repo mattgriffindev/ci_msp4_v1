@@ -184,7 +184,7 @@ li,
 .hero-container .img-fluid {
 	height: 100%;
 	width: 100%;
-	opacity: 0;
+	display: none;
 	object-fit: cover;
 }
 
@@ -200,30 +200,30 @@ li,
 }
 
 .fade-in {
-	animation: fade-in 1s forwards;
+	animation: fade-in 1s linear forwards;
 }
 
 @keyframes fade-in {
+	0% {
+		transform: scale(0);
+	}
 	100% {
-		opacity: 1;
+		transform: scale(1);
 	}
 }
 
 .hero-zoom {
-	animation: hero-zoom 5s forwards;
+	animation: hero-zoom 5s;
 }
 
 @keyframes hero-zoom {
     0% {
-		opacity: 1;
         transform: scale(1);
     }
     50% {
-		
         transform: scale(1.1);
     }
 	100% {
-		opacity: 1;
         transform: scale(1);
     }
 }
