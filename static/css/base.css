@@ -221,7 +221,7 @@ li,
 
 /*--------------------------------------------------------------index-content-*/
 
-.img-middle {
+.hero-container .img-middle {
 	transition: .5s ease;
 	opacity: 0;
 	position: absolute;
@@ -232,20 +232,20 @@ li,
 	text-align: center;
   }
   
-.img {
+.hero-container .img {
 	transition: .5s ease;
   	backface-visibility: hidden;
 }
 
-  .img-wrapper:hover .img {
+.hero-container .img-wrapper:hover .img {
 	opacity: 0.3;
   }
   
-  .img-wrapper:hover .img-middle {
+.hero-container .img-wrapper:hover .img-middle {
 	opacity: 1;
   }
   
-  .img-text {
+.hero-container .img-text {
 	color: var(--dark-color);
 	font-size: 2rem;
   }

@@ -39,6 +39,11 @@ def all_products(request):
             products = products.filter(category__name__in=categories)
             categories = Category.objects.filter(name__in=categories)
 
+        # if 'sale' in request.GET:
+        #     sale = request.GET("on_sale") == "True"
+        #     products = products.filter(on__sale__in=products)
+        #     categories = Category.objects.filter(name__in=categories)
+
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
