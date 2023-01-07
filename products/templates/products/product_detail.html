@@ -65,7 +65,7 @@
                 <span class="d-flex justify-content-start mt-3">
                     <a class="update-link btn btn-sm btn-light me-1" href="{% url 'edit_product' product.id %}">Edit</a>
                     <a class="remove-item btn btn-sm btn-dark float-right ms-1"
-                        href="{% url 'delete_product' product.id %}">Remove</a>
+                        href="{% url 'delete_product' product.id %}" onclick="deleteProduct(event)">Remove</a>
                 </span>
                 {% endif %}
                 <p class="mt-3">{{ product.description|linebreaks }}</p>
@@ -146,7 +146,7 @@
                         {{ review.body }}
                     </p>
                     {% if request.user.is_superuser %}
-                    <a class="remove-item btn btn-sm btn-dark ms-1" href="">Remove</a>
+                    <a class="remove-item btn btn-sm btn-dark ms-1" href="{% url 'delete_review' review.id %}" onclick="deleteReview(event)">Remove</a>
                     {% endif %}
                 </div>
             </div>
@@ -166,5 +166,22 @@
 {% block postloadjs %}
 {{ block.super }}
 {% include 'products/includes/quantity_input_script.html' %}
+<script>
+    function deleteProduct(e) {
+        var agree=confirm("You are about to permanently delete this product.\nAre you sure you wish to continue?");
+        if (agree)
+        return true;
+        else
+        return false ;
+    };
+
+    function deleteReview(e) {
+        var agree=confirm("You are about to permanently delete this review.\nAre you sure you wish to continue?");
+        if (agree)
+        return true;
+        else
+        return false ;
+    };
+</script>
 
 {% endblock %}

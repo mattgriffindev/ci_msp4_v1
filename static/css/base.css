@@ -506,3 +506,10 @@ li,
 	border: 1px solid var(--brand-color);
 	border-radius: 0;
 }
+
+#testBox {
+	display: none;
+	border: 1px solid hotpink;
+	margin-bottom: 25%;
+	margin-left: 25%;
+}

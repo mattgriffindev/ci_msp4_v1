@@ -94,7 +94,7 @@
                                     {% if request.user.is_superuser %}
                                     <span class="d-flex justify-content-start mt-3">
                                         <a class="update-link btn btn-sm btn-light me-1" href="{% url 'edit_product' product.id %}">Edit</a>
-                                        <a class="remove-item btn btn-sm btn-dark float-right ms-1">Remove</a>
+                                        <a class="remove-item btn btn-sm btn-dark float-right ms-1" href="{% url 'delete_product' product.id %}" onclick="deleteProduct(event)">Remove</a>
                                     </span>
                                     {% endif %}
                                 </div>
@@ -121,7 +121,6 @@
                 <div class="col-12 d-none d-xl-block mb-5">
                     <hr>
                 </div>
-                    <!-- </div> -->
                 {% endif %}
                 {% endfor %}
             </div>
@@ -129,6 +128,7 @@
     </div>
 </div>
 
+<!--Back to top button-->
 <div class="btt-button shadow-sm rounded-0 border border-black">
     <a class="btt-link d-flex h-100">
         <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
@@ -162,6 +162,14 @@
 
             window.location.replace(currentUrl);
         }
-    })
+    });
+
+    function deleteProduct(e) {
+        var agree=confirm("You are about to permanently delete this product.\nAre you sure you wish to continue?");
+        if (agree)
+        return true;
+        else
+        return false ;
+    };
 </script>
 {% endblock %}

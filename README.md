@@ -93,7 +93,7 @@ Some actions can only be performed by superusers.
 
 - Superusers will get an alert asking them if they are sure they want to delete the item.
 
-![delete-alert](/ci_msp4/docs/delete-product.webp)
+![confirm-delete](/ci_msp4/docs/confirm-delete.webp)
 
 **Colour scheme**
 
