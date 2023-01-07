@@ -6,6 +6,17 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
 
+def reviews(request):
+
+    reviews = Review.objects.all()
+
+    context = {
+        'reviews': reviews,
+    }
+
+    return render(request, 'reviews/reviews.html', context)
+
+
 def add_review(request, id):
     reviews = Review.objects.all()
     product = Product.objects.get(id=id)
