@@ -49,17 +49,17 @@ li,
 
 /* buttons */
 .btn-light {
-	color: var(--dark-color);
-	background-color: transparent;
-	border: 1px solid var(--dark-color);
-	border-radius: 50px;
+	color: var(--dark-color) !important;
+	background-color: transparent !important;
+	border: 1px solid var(--dark-color) !important;
+	border-radius: 50px !important;
 }
 
 .btn-dark {
-	color: var(--white);
-	background-color: var(--dark-color);
-	border: 1px solid var(--dark-color);
-	border-radius: 50px;
+	color: var(--white) !important;
+	background-color: var(--dark-color) !important;
+	border: 1px solid var(--dark-color) !important;
+	border-radius: 50px !important;
 }
 
 /* page header */
@@ -501,3 +501,8 @@ li,
 	}
 }
  
+
+.dropdown-menu {
+	border: 1px solid var(--brand-color);
+	border-radius: 0;
+}

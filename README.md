@@ -6,35 +6,120 @@ The site uses HTML5, CSS3, JavaScript, Python, Django, and ElephantSQL.
 
 [View the live site here](https://mattgriffindev.github.io/hi-lo/ "Paul Reed")
 
+## **1. User experience**
+
+### User stories
+
+**As a user, I want to...**
+
+  1. Understand the site's main purpose and find out more about what the site offers
+  2. Navigate within the site to find relevant content
+  3. View items without having to create an account
+  4. View and sort items by category and price
+  5. Purchase items without having to create an account
+  6. Register for an account if I choose to
+  7. Find the site's contact details, including social media links, and be able to contact the site
+  8. Log in to my account (returning user)
+  9. Share reviews of items I have purchased (returning user)
+  10. View my previous orders (returning user)
+
+**As a superuser, I want to...**
+
+  1. Log in to my account
+  2. Add, edit, and delete items
+  3. Delete user reviews
+
+**How this is achieved**
+
+**Design**
+
+ - The site uses a simple and consistent layout and design.
+
+**Navigation**
+
+ - Users can access different categories and sub-categories of itmes from the navbar.
+
+![navbar](/ci_msp4/docs/navbar.webp)
+
+ - User can access categories by hovering over the hero images.
+
+![hero-image](/ci_msp4/docs/hero-image.webp)
+
+**Items**
+
+ - Users can add a review for individual items.
+
+ ![add-review](/ci_msp4/docs/add-review.webp)
+
+ - Users can access recipes without having to register or login.
+ - Registered users can share their own recipes.
+ - Registered users can view their own recipes on their profile page.
+
+  ![profile recipes](cakebox/static/img/profile-recipes.png)
+
+**Register, Login, and Logout**
+
+ - Users can login or register using the buttons in the navbar. 
+
+![login-register](/ci_msp4/docs/login-register.webp)
+
+ - Users can register for an account easily.
+
+![signup](/ci_msp4/docs/signup.webp)
+ 
+ - Users can login to their account easily.
+
+![sign-in](/ci_msp4/docs/sign-in.webp)
+
+ - Users can logout of their account from the navbar.
+
+![logout](/ci_msp4/docs/logout.webp)
+
+**Defensive programming**
+   
+Some actions can only be performed by superusers.
+
+- Superusers can add items.
+
+![add-product](/ci_msp4/docs/add-product.webp)
+
+- Superusers can edit items.
+
+![edit-product](/ci_msp4/docs/edit-product.webp)
+
+- Superusers can delete items.
+
+![delete-product](/ci_msp4/docs/delete-product.webp)
+
+- Superusers will get an alert asking them if they are sure they want to delete the item.
+
+![delete-alert](/ci_msp4/docs/delete-product.webp)
+
 **Colour scheme**
 
-The color scheme is based on shades of red (copper rose) and orange (gamboge) with shades of grey.
+The color scheme is based on shades of blue and grey.
 
-![Color palette](cakebox/static/img/palette.png)
+![colour-palette](/ci_msp4/docs/colour-palette.webp)
 
 **Typography**
 
-The brand font is Poiret One with a cursive fallback font.
+The brand font is Inspiration with a cursive fallback font.
 
-![Brand font](cakebox/static/img/brand-font.png)
+![brand-font](/ci_msp4/docs/brand-font.webp)
 
-The primary font is Didact Gothic with a sans-serif fallback font.
+The primary font is Roboto with a sans-serif fallback font.
 
-![Primary font](cakebox/static/img/primary-font.png)
-
-The signature font is M PLUS 1 Code with a cursive fallback font.
+![primary-font](/ci_msp4/docs/primary-font.webp)
 
 **Imagery**
 
-The hero image is a vegan cake in keeping with the theme of the site.
-
-The images in the quicklinks section are also vegan cakes.
+All images are representative of the items in the products section.
 
 **Interactive links**
 
 The site includes internal hyperlinks to the different pages of the site and external hyperlinks to Facebook, Twitter and Instagram, which open in a new browser tab.
 
-The site includes two email address hyperlinks that will automatically open a user's email application and autofill the email address in the "To" field, the subject 'Mail from our site' in the "Subject" field, and the text 'Thank you for contacting us. Please let us know how we can help you...' in the body.
+The contact page includes an email address hyperlink that will automatically open a user's email application and autofill the email address in the "To" field, the subject 'Mail from our site' in the "Subject" field, and the text 'Thank you for contacting us. Please let us know how we can help you...' in the body.
 
 **Wireframes**
 
@@ -48,11 +133,9 @@ Similarly, wireframes were created for the homepage, recipes page, and full reci
 
 **Database scheme**
 
-PostgreSQL manages the data for the recipe categories and users.
+ElephantSQL manages the data for the various applications
 
-MongoDB manages the data for the recipes.
-
-![Database scheme](cakebox/static/img/db-schema.png)
+![db-scheme](/ci_msp4/docs/db-scheme.pdf)
 
 ## **2. Features**
 
@@ -76,23 +159,9 @@ The site is designed to be responsive on all devices.
 
 - [Bootstrap v5](https://getbootstrap.com/docs/5.0/getting-started/introduction/ "Bootstrap v5") was used to assist with the responsiveness and styling of the website.
 
-- [Cloudinary API](https://cloudinary.com/) was used to enable users to upload images for their recipes whilst keeping the App safe and secure
-
-- [Flask](https://flask.palletsprojects.com/en/2.0.x/) was used to handle the templating for the site.
-
-- [Postgres](https://www.postgresql.org/) was the relational database used to store user registration, login and authentication. Postgres was also used to store the Categories.
-
-- [MongoDB](https://www.mongodb.com/) was the nonrelational database used to store less structured data such as the recipes. MongoDB is where we host our NoSQL database.
-
-- [Flask-PyMongo](https://pypi.org/project/Flask-PyMongo/) provides MongoDB support for Flask applications.
+- [ElephantSQL](https://www.elephantsql.com//) was the relational database used to host the database.
 
 - [pip](https://pip.pypa.io/en/stable/) is the package installer for Python, allowing us to install the packages we need for this site.
-
-- [dnspython](https://www.dnspython.org/) is a DNS toolkit for python.
-
-- [Werkzeug](https://wsgi.readthedocs.io/en/latest/what.html) is a Web Server Gateway Interface web application library.
-
-- [Jinja](https://www.palletsprojects.com/p/jinja/) a templating engine for Python, used to write Flask and other templating services.
 
 - [Google Fonts](https://fonts.google.com/ "Google Fonts") was used to import the Bubblegum Sans and Nunito fonts into the style.css file, which are used throughout the website.
 
@@ -195,7 +264,7 @@ The following sources were used to provide additional information relating to HT
 
 **Content**
 
-All content was written or adapted by the developer with the exception of the product descriptions, which were sourced from Stone the Crows (https://www.stonethecrowsretail.co.uk/) and Liberty London (https://www.libertylondon.com/).
+All content was written or adapted by the developer with the exception of the product descriptions, images, and policy text, which were sourced from Stone the Crows (https://www.stonethecrowsretail.co.uk/).
 
 **Media**
 
@@ -205,4 +274,4 @@ All images were converted to .webp (where necessary) using [online-convert](http
 
 **Acknowledgements**
 
-Thank you to my mentor, Dario Carrasquel for his helpful feedback, and to tutor support at Code Institute for their support and patience.
+Thank you to my mentor, Dario Carrasquel for his helpful feedback, the web developer community on Twitter, and to tutor support at Code Institute for their support and patience.

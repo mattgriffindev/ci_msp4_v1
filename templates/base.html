@@ -84,7 +84,7 @@
                     perm_identity</span></div>
               </div>
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="user-options">
+            <div class="dropdown-menu rounded-0" aria-labelledby="user-options">
               {% if request.user.is_authenticated %}
               {% if request.user.is_superuser %}
               <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>

@@ -95,7 +95,7 @@
                                     {% if request.user.is_superuser %}
                                     <span class="d-flex justify-content-start mt-3">
                                         <a class="update-link btn btn-sm btn-light me-1" href="{% url 'edit_product' product.id %}">Edit</a>
-                                        <a class="remove-item btn btn-sm btn-dark float-right ms-1" href="{% url 'delete_product' product.id %}">Remove</a>
+                                        <a class="remove-item btn btn-sm btn-dark float-right ms-1" data-bs-toggle="modal" data-bs-target="#dremoveItem-{{ product.id }}">Remove</a>
                                     </span>
                                     {% endif %}
                                 </div>
@@ -122,6 +122,19 @@
                 <div class="col-12 d-none d-xl-block mb-5">
                     <hr>
                 </div>
+                <div class="modal fade" id="removeItem-{{ product.id }}" tabindex="-1" aria-labelledby="removeItemLabel" aria-hidden="true">>
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content text-center">
+                            <h3 class="modal-title mx-5 pt-3">Do you really want to delete this item?</h3>
+                            <p class="mx-auto pt-3">This cannot be undone.</p>
+                            <div class="modal-footer mx-auto">
+                                <a href="{% url 'delete_product' product.id %}" class="btn btn-light">Yes, delete this item</a>
+                                <a href="{% url 'products' %}" role="button" class="btn btn-dark" data-bs-dismiss="modal" aria-label="Close">No, take me back</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
                 {% endif %}
                 {% endfor %}
             </div>
@@ -141,9 +154,7 @@
     $('.btt-link').click(function (e) {
         window.scrollTo(0, 0)
     })
-</script>
 
-<script type="text/javascript">
     $('#sort-selector').change(function () {
         var selector = $(this);
         var currentUrl = new URL(window.location);
