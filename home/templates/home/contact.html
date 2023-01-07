@@ -37,7 +37,7 @@
             <p>Simply fill in the form below and we'll get back to you<br>
             <span class="text-danger">* Required</span></p>
 
-            <form id="contactForm" class="contact-form" onsubmit="return sendMail(this);">
+            <form id="contactForm" class="contact-form" onsubmit="return sendMail(this);" method="POST">
                 <div class="form-group mb-4">
                     <h6>Add your name<span class="text-danger">*</span></h6>
                     <input type="text" class="form-control border-dark" name="name" id="name"
@@ -64,5 +64,11 @@
         </div>
     </div>
 </div>
+
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+{% include 'home/includes/send_email_script.html' %}
 
 {% endblock %}
