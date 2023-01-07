@@ -57,14 +57,14 @@
                     <div class="card h-100 border-0">
                         {% if product.image1.url %}
                         <a href="{% url 'product_detail' product.id %}">
-                            {% if product.on_sale%}
+                            {% if product.sale_price %}
                                 <span class="badge badge-sale-sm bg-danger">Sale</span>
                             {% endif %}
                                 <img class="card-img-top img-fluid" src="{{ product.image1.url }}" alt="{{ product.name }}">
                         </a>
                         {% else %}
                         <a href="{% url 'product_detail' product.id %}">
-                            {% if product.on_sale%}
+                            {% if product.sale_price %}
                                 <span class="badge badge-sale-sm bg-danger">Sale</span>
                             {% endif %}
                                 <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"
@@ -77,7 +77,7 @@
                         <div class="card-footer bg-white pt-0 border-0 text-left">
                             <div class="row">
                                 <div class="col">
-                                    {% if product.on_sale %}
+                                    {% if product.sale_price %}
                                     <p><span class="mb-0 text-left text-danger text-decoration-line-through">£{{ product.price }}</span>&nbsp;
                                         <span class="lead mb-0 text-left font-weight-bold">£{{ product.sale_price }}</span></p>
                                     {% else %}
