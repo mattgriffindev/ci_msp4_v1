@@ -57,7 +57,7 @@
           <div class="card h-100 border-0">
             {% if product.image1.url %}
             <a href="{% url 'product_detail' product.id %}" class="border">
-              {% if product.on_sale%}
+              {% if product.on_sale %}
               <span class="badge badge-sale-sm bg-danger">Sale</span>
               {% endif %}
               <img class="img-fluid" src="{{ product.image1.url }}" alt="{{ product.name }}">
