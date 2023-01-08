@@ -40,8 +40,8 @@ def all_products(request):
             categories = Category.objects.filter(name__in=categories)
 
         if 'sale' in request.GET:
-            products = Product.objects.filter(on_sale=True).order_by('product.id')
-            
+            products = Product.objects.filter(on_sale=True)
+
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:

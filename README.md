@@ -4,7 +4,7 @@ Paul Reed is an online luxury homeware store selling a range of furniture, utens
 
 The site uses HTML5, CSS3, JavaScript, Python, Django, and ElephantSQL.
 
-[View the live site here](https://mattgriffindev.github.io/hi-lo/ "Paul Reed")
+[View the live site here](https://cimsp4v1.herokuapp.com/ "Paul Reed")
 
 ## **1. User experience**
 

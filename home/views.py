@@ -7,7 +7,7 @@ from products.models import Product
 def index(request):
     """ return index page """
 
-    products = Product.objects.filter(on_sale=True).order_by('product.id')[:4]
+    products = Product.objects.filter(on_sale=True).order_by('id')[:4]
 
     context = {
         'products': products,
