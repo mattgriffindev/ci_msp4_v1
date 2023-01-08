@@ -6,7 +6,7 @@
 	--dark-color: #30343F;
 	--mid-color: #D0C9E2;
 	--light-color: #FFFFFF;
-	--accent-color: green;
+	--logo-color: #4D5575;
 	--white: #FFF;
 	--black: #111;
 	--heart: #ffb3be;
@@ -81,7 +81,7 @@ li,
 }
 
 .brand h1 {
-	color: var(--brand-color);
+	color: var(--logo-color);
 	font-family: var(--brand-font);
 	font-size: 4rem;
 }
@@ -145,7 +145,7 @@ li,
 .hero-container .img-fluid {
 	height: 100%;
 	width: 100%;
-	/* display: none; */
+	display: none;
 	object-fit: cover;
 }
 
