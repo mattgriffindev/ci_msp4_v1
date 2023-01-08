@@ -33,83 +33,83 @@ The site uses HTML5, CSS3, JavaScript, Python, Django, and ElephantSQL.
 
 **Design**
 
- - The site uses a simple and consistent layout and design.
+The site uses a simple and consistent layout and design.
 
 **Navigation**
 
- - Users can access different categories and sub-categories of itmes from the navbar.
+Users can access different categories and sub-categories of itmes from the navbar.
 
-![navbar](/ci_msp4/docs/navbar.webp)
+> ![navbar](/ci_msp4/docs/navbar.webp)
 
- - User can access categories by hovering over the hero images.
+User can access categories by hovering over the hero images.
 
-![hero-image](/ci_msp4/docs/hero-image.webp)
+> ![hero-image](/ci_msp4/docs/hero-image.webp)
 
 **Items**
 
- - Users can add a review for individual items.
+Users can add a review for individual items.
 
- ![add-review](/ci_msp4/docs/add-review.webp)
+> ![add-review](/ci_msp4/docs/add-review.webp)
 
- - Users can access recipes without having to register or login.
- - Registered users can share their own recipes.
- - Registered users can view their own recipes on their profile page.
+Users can access recipes without having to register or login.
+Registered users can share their own recipes.
+Registered users can view their own recipes on their profile page.
 
-  ![profile recipes](cakebox/static/img/profile-recipes.png)
+> ![profile recipes](cakebox/static/img/profile-recipes.png)
 
 **Register, Login, and Logout**
 
- - Users can login or register using the buttons in the navbar. 
+Users can login or register using the buttons in the navbar. 
 
-![login-register](/ci_msp4/docs/login-register.webp)
+> ![login-register](/ci_msp4/docs/login-register.webp)
 
- - Users can register for an account easily.
+Users can register for an account easily.
 
-![signup](/ci_msp4/docs/signup.webp)
+> ![signup](/ci_msp4/docs/signup.webp)
  
- - Users can login to their account easily.
+Users can login to their account easily.
 
-![sign-in](/ci_msp4/docs/sign-in.webp)
+> ![sign-in](/ci_msp4/docs/sign-in.webp)
 
- - Users can logout of their account from the navbar.
+Users can logout of their account from the navbar.
 
-![logout](/ci_msp4/docs/logout.webp)
+> ![logout](/ci_msp4/docs/logout.webp)
 
 **Defensive programming**
    
 Some actions can only be performed by superusers.
 
-- Superusers can add items.
+Superusers can add items.
 
-![add-product](/ci_msp4/docs/add-product.webp)
+> ![add-product](/ci_msp4/docs/add-product.webp)
 
-- Superusers can edit items.
+Superusers can edit items.
 
-![edit-product](/ci_msp4/docs/edit-product.webp)
+> ![edit-product](/ci_msp4/docs/edit-product.webp)
 
-- Superusers can delete items.
+Superusers can delete items.
 
-![delete-product](/ci_msp4/docs/delete-product.webp)
+> ![delete-product](/ci_msp4/docs/delete-product.webp)
 
-- Superusers will get an alert asking them if they are sure they want to delete the item.
+Superusers will get an alert asking them if they are sure they want to delete the item.
 
-![confirm-delete](/ci_msp4/docs/confirm-delete.webp)
+> ![confirm-delete](/ci_msp4/docs/confirm-delete.webp)
 
 **Colour scheme**
 
 The color scheme is based on shades of blue and grey.
 
-![colour-palette](/ci_msp4/docs/colour-palette.webp)
+> ![colour-palette](/ci_msp4/docs/colour-palette.webp)
 
 **Typography**
 
 The brand font is Inspiration with a cursive fallback font.
 
-![brand-font](/ci_msp4/docs/brand-font.webp)
+> ![brand-font](/ci_msp4/docs/brand-font.webp)
 
 The primary font is Roboto with a sans-serif fallback font.
 
-![primary-font](/ci_msp4/docs/primary-font.webp)
+> ![primary-font](/ci_msp4/docs/primary-font.webp)
 
 **Imagery**
 
@@ -135,7 +135,7 @@ Similarly, wireframes were created for the homepage, recipes page, and full reci
 
 The site uses a relationship database. ElephantSQL manages the SQL data for the various applications.
 
-![db-scheme](/ci_msp4/docs/db-scheme.webp)
+> ![db-scheme](/ci_msp4/docs/db-scheme.webp)
 
 ## **2. Features**
 
