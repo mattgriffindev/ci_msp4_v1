@@ -133,9 +133,9 @@ Similarly, wireframes were created for the homepage, recipes page, and full reci
 
 **Database scheme**
 
-ElephantSQL manages the data for the various applications
+The site uses a relationship database. ElephantSQL manages the SQL data for the various applications.
 
-![db-scheme](/ci_msp4/docs/db-scheme.pdf)
+![db-scheme](/ci_msp4/docs/db-scheme.webp)
 
 ## **2. Features**
 
