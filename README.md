@@ -181,17 +181,15 @@ The site is designed to be responsive on all devices.
 
 **W3C markup validator**
 
-The [W3C Markup Validator](https://validator.w3.org/ "W3C Markup Validator") was used to to validate the site's HTML. The Validator returned 4 warnings and 1 error.
+The [W3C Markup Validator](https://validator.w3.org/ "W3C Markup Validator") was used to to validate the site's HTML. The Validator returned 1 info, 4 warnings and 13 errors. These were all resolved.
 
-A copy of the original report can be accessed [here](docs/tests/html-validator-1.pdf "W3C Markup Validator report").
+A copy of the original report can be accessed [here](/ci_msp4/docs/tests/html-validator-1.pdf "W3C Markup Validator report").
 
-A copy of the final report can be accessed [here](docs/tests/html-validator-2.pdf "W3C Markup Validator report").
+A copy of the final report can be accessed [here](/ci_msp4/docs/tests/html-validator-2.pdf "W3C Markup Validator report").
 
 **W3C CSS validator**
 
-The [W3C CSS Validator](https://jigsaw.w3.org/css-validator/ "W3C CSS Validator") was used to validate the site's CSS. The Validator returned no warnings.
-
-A copy of the report can be accessed [here](docs/tests/css-validator-1.pdf "W3C CSS Validator report").
+The [W3C CSS Validator](https://jigsaw.w3.org/css-validator/ "W3C CSS Validator") was used to validate the site's CSS. The Validator returned 16 errors and 1,091 warnings; however, these were all related to Bootstrap CSS, vendor extensions, vendor extended pseudo-elements, and vendor extended pseudo-classes, so were ignored.
 
 **Lighthouse testing**
 
@@ -213,11 +211,11 @@ The reports can be viewed below:
 
 **a11y color contrast accessibility validator**
 
-The [ally Color Contrast Accessibility Validator](https://color.a11y.com/Contrast/ "ally Color Contrast Accessibility Validator") was used to test for color contrast problems. The Validator retuend 1 problems with contrast color-pairs. These problems were resolved by adjusting the contrast of the font color.
+The [ally Color Contrast Accessibility Validator](https://color.a11y.com/Contrast/ "ally Color Contrast Accessibility Validator") was used to test for color contrast problems. The Validator retuend 1 problem with contrast color-pairs. This problem was resolved by adjusting the contrast of the font color.
 
-A copy of the original report can be accessed [here](docs/tests/a11y-contrast-checker-1.pdf "ally Color Contrast Accessibility Validator report").
+A copy of the original report can be accessed [here](/ci_msp4/docs/tests/a11y-contrast-accessibility-validator-1.pdf "ally Color Contrast Accessibility Validator report").
 
-A copy of the final report can be accessed [here](docs/tests/a11y-contrast-checker-2.pdf "ally Color Contrast Accessibility Validator report").
+A copy of the final report can be accessed [here](/ci_msp4/docs/tests/a11y-contrast-accessibility-validator-2.pdf "ally Color Contrast Accessibility Validator report").
 
 **Responsiveness testing**
 

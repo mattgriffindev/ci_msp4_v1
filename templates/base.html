@@ -22,7 +22,7 @@
     integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css"
-    type="text/css" />
+    type="text/css">
   <link rel="stylesheet" href="{% static 'css/base.css' %}">
   {% endblock %}
 
@@ -39,9 +39,9 @@
     integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous">
   </script>
   <script src="https://js.stripe.com/v3/"></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
   </script>
-  <script type="text/javascript">
+  <script>
     (function () {
       emailjs.init("VRNsXLE_yLoioFtsD");
     })();
@@ -161,7 +161,7 @@
   {% endblock %}
 
   {% block postloadjs %}
-  <script type="text/javascript">
+  <script>
     $(document).ready(function () {
       $("#staticBackdrop").modal("show");
     });
@@ -189,7 +189,7 @@
           <p class="pe-md-5">
             <small>Let's keep in touch. Sign up to our newsletter below.</small>
           </p>
-          <form method="GET" action="">
+          <form method="POST">
             <div class="input-group w-md-50 my-3">
               <input class="form-control" type="text" name="q" placeholder="Email">
               <div class="input-group-append">
@@ -219,12 +219,13 @@
               <p><small>Copyright Paul Reed 2022.
                   <span class="d-inline d-lg-none"><br></span>
                   Made with <i class="fas fa-heart hvr-pulse"></i> by <a href="https://github.com/mattgriffindev"
-                    target="_blank">mattgriffindev</a>
-              </p></small>
+                    target="_blank">mattgriffindev</a></small>
+              </p>
             </div>
           </div>
         </div>
       </div>
+    </div>
   </footer>
   <!--/footer-->
 
