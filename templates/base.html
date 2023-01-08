@@ -64,7 +64,7 @@
           <div class="input-group">
             <input class="form-control d-none d-md-block" type="text" name="q" placeholder="">
             <div class="input-group-append">
-              <button class="form-control btn" type="submit">
+              <button class="form-control btn" type="submit" aria-label="submit search button">
                 <span class="material-icons-outlined search-icon">
                   search</span>
               </button>
@@ -73,7 +73,7 @@
         </form>
       </div>
       <div class="col-md-4 my-auto py-1 py-lg-0">
-        <a href="{% url 'home' %}" class="brand text-center">
+        <a href="{% url 'home' %}" class="brand text-center" aria-label="link to home page">
           <h1 class="my-0">Paul Reed</h1>
         </a>
       </div>
@@ -101,16 +101,10 @@
             </div>
           </li>
           <li class="list-inline-item">
-            <a class="nav-link" href="{% url 'view_bag' %}">
+            <a class="nav-link" href="{% url 'view_bag' %}" aria-label="view bag">
               <div class="text-center">
                 <div><span class="material-icons-outlined bag-icon">
                     shopping_bag</span></div>
-                <!-- <p class="my-0">
-                  {% if grand_total %}
-                  {{ product_count }}
-                  {% else %}
-                  {% endif %}
-                </p> -->
               </div>
             </a>
           </li>
@@ -166,17 +160,17 @@
       $("#staticBackdrop").modal("show");
     });
 
-    // $(document).ready(fadeIn());
+    $(document).ready(fadeIn());
     
-    // function fadeIn() {
-    // $(".img:eq(0)").addClass("fade-in").show();
-    // setTimeout(function () {
-    // $(".img:eq(1)").addClass("fade-in").show();
-    // }, 300);
-    // setTimeout(function () {
-    // $(".img:eq(2)").addClass("fade-in").show();
-    // }, 500);
-    // };
+    function fadeIn() {
+    $(".img:eq(0)").addClass("fade-in").show();
+    setTimeout(function () {
+    $(".img:eq(1)").addClass("fade-in").show();
+    }, 300);
+    setTimeout(function () {
+    $(".img:eq(2)").addClass("fade-in").show();
+    }, 500);
+    };
   </script>
   {% endblock %}
 
@@ -193,7 +187,7 @@
             <div class="input-group w-md-50 my-3">
               <input class="form-control" type="text" name="q" placeholder="Email">
               <div class="input-group-append">
-                <button class="form-control btn" type="submit">
+                <button class="form-control btn" type="submit" aria-label="Submit email subscription">
                   <span>
                     <i class="fas fa-arrow-right"></i>
                   </span>
@@ -209,10 +203,10 @@
             <div class="col-12 col-md-6 text-center text-md-start pt-2">
               <span>
                 <a href="https://www.twitter.com" target="_blank"><i class="social-media-icon fab fa-twitter"></i></a>
-                <a href="https://www.facebook.com" target="_blank"><i
-                    class="social-media-icon fab fa-facebook-f"></i></a>
+                <a href="https://www.facebook.com" target="_blank" aria-label="Link to Twitter"><i
+                    class="social-media-icon fab fa-facebook-f" aria-label="Link to Facebook"></i></a>
                 <a href="https://www.linkedin.com" target="_blank"><i
-                    class="social-media-icon fab fa-linkedin-in"></i></a>
+                    class="social-media-icon fab fa-linkedin-in" aria-label="Link to LinkedIn"></i></a>
               </span>
             </div>
             <div class="col-12 col-md-6 text-center text-md-end pt-2">

@@ -51,9 +51,8 @@ Users can add a review for individual items.
 
 > ![add-review](/ci_msp4/docs/add-review.webp)
 
-Users can access recipes without having to register or login.
-Registered users can share their own recipes.
-Registered users can view their own recipes on their profile page.
+Users can access items without having to register or login.
+Registered users can view their previous orders on their profile page.
 
 > ![profile recipes](cakebox/static/img/profile-recipes.png)
 
@@ -141,7 +140,7 @@ The site uses a relationship database. ElephantSQL manages the SQL data for the 
 
 The site is designed to be responsive on all devices.
 
-## **3. Technologies userd**
+## **3. Technologies used**
 
 **Languages used**
 
@@ -225,7 +224,10 @@ The website was responsive on all screen sizes from 320x480px to 1920x1200px.
 
 **Known Bugs**
 
-No bugs have been identified.
+- The email subscription form on the footer has no functionality at present
+- Delivery information has not yet been added to the Product model
+- The sort by price filter does not account for sale price
+- Image thumbnails on the product details page have no functionality at present
 
 ## 5. Deployment
 
