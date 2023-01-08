@@ -194,19 +194,19 @@ The [W3C CSS Validator](https://jigsaw.w3.org/css-validator/ "W3C CSS Validator"
 
 The website was tested using Lighthouse on the Chrome and Microsoft Edge browsers to determine the website’s performance, accessibility, best practices, and SEO.
 
-For desktop, all measures scored at least 90% 
+For desktop and mobile, on both Chrome and Edge, accessibility, best practice, and SEO scored at least 90%.
 
-For mobile, the performance measure scored 83% and 87% on Chrome and Edge respectively. This was considered acceptable at this time; however, the developer may look to improve this in the future.
+For desktop and mobile, on both Chrome and Edge, performance scored less than 90% (with the exception of Edge mobile, which scored at least 90%). This was considered acceptable at this time; however, the developer may look to improve this in the future.
 
 The reports can be viewed below:
 
-- [Chrome Desktop](docs/tests/lighthouse-chrome-desktop.pdf "Chrome Desktop report")
+- [Chrome Desktop](/ci_msp4/docs/tests/chrome-lighthouse-desktop-1.pdf "Chrome Desktop report")
 
-- [Chrome Mobile](docs/tests/lighthouse-chrome-mobile.pdf "Chrome Mobile report")
+- [Chrome Mobile](/ci_msp4/docs/tests/chrome-lighthouse-mobile-1.pdf "Chrome Mobile report")
 
-- [Edge Desktop](docs/tests/lighthouse-edge-desktop.pdf "Edge Desktop report")
+- [Edge Desktop](/ci_msp4/docs/tests/edge-lighthouse-desktop-1.pdf "Edge Desktop report")
 
-- [Edge Mobile](docs/tests/lighthouse-edge-mobile.pdf "Edge Mobile report")
+- [Edge Mobile](/ci_msp4/docs/tests/edge-lighthouse-mobile-1.pdf "Edge Mobile report")
 
 **a11y color contrast accessibility validator**
 
