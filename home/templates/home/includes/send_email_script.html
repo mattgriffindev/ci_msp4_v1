@@ -10,7 +10,8 @@
     .then(
         function(response) {
             console.log("SUCCESS", response);
-            messages.success(request, 'Your message has been sent.')
+            alert("Your message has been sent successfully");
+            location.reload();
         },
         function(error) {
             console.log("FAILED", error);

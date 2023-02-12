@@ -142,10 +142,13 @@ li,
 
 .carousel-inner {
 	background-color: black;
-	height: 28rem;
+	height: 30rem;
 }
 
-
+.carousel-item img {
+	object-fit: fit;
+	object-position: center;
+}
 
 .carousel-item-inner-text {
 	position: absolute;
