@@ -171,6 +171,7 @@
 {% block postloadjs %}
 {{ block.super }}
 {% include 'products/includes/quantity_input_script.html' %}
+{% include 'products/includes/show_thumbnail_script.html' %}
 <script>
     function deleteProduct(e) {
         var agree=confirm("You are about to permanently delete this product.\nAre you sure you wish to continue?");
