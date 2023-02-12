@@ -140,14 +140,12 @@ li,
 
 /*----------------------------------------------------------------------hero-*/
 
-.carousel-inner {
-	background-color: black;
-	height: 30rem;
-}
 
-.carousel-item img {
-	object-fit: fit;
-	object-position: center;
+.carousel-img {
+	height: 30rem;
+	width: 100%;
+	object-fit: cover;
+	object-position: 50% 50%;
 }
 
 .carousel-item-inner-text {
@@ -456,28 +454,3 @@ li,
 		column-count: 3;
 	}
 }
- 
-
-
-
-/* #photo {
-    clear: both;
-    column-gap: 4px;
-}
-
-#photo img {
-    width: 100%;
-	margin-top: 4px;
-	transition: transform 2s;
-	object-fit: cover;
-}
-
-#photo img:hover {
-	transform: scale(1.2);
-}
-
-
-.img-wrapper {
-	overflow: hidden;
-}
- */

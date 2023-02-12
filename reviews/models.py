@@ -9,11 +9,11 @@ class Review(models.Model):
     title = models.CharField(max_length=80, null=True)
     body = models.TextField()
     rate_choices = (
-        (1,1),
-        (2,2),
-        (3,3),
-        (4,4),
-        (5,5)
+        (1, 1),
+        (2, 2),
+        (3, 3),
+        (4, 4),
+        (5, 5)
     )
     rating = models.IntegerField(choices=rate_choices, default='0')
     created_on = models.DateTimeField(auto_now_add=True)
