@@ -16,31 +16,49 @@
     <div class="row mt-3">
         <div class="col-12 col-md-6 offset-md-3">
             <p class="lead">Create Review</p>
-            <div class="d-flex align-items-center">
-                <img class="img-thumbnail float-start" src="{{ product.image1.url }}" alt="{{ product.name }}">
-                <p class="ms-2">{{ product.name }}</p>
+            <div>
+                <a class="nav-link d-flex align-items-center" href="{% url 'product_detail' product.id %}">
+                    <img class="img-fluid float-start" style="height:10rem;width:auto;" src="{{ product.image1.url }}" alt="{{ product.name }}">
+                    <p class="ms-2">{{ product.name }}</p>
+                </a>
             </div>
-        <br>
-            <form method="post" style="margin-top: 1.3em;">
+            <br>
+            <form method="post" class="mt-3">
                 {% csrf_token %}
-            <div class="form-group mb-4">
-                <h6>Add a headline</h6>
-                {{ form.title }}
-            </div>
-            <div class="form-group mb-4">
-                <h6>Add your name</h6>
-                {{ form.name }}
-            </div>
-            <div class="form-group mb-4">
-                <h6>Add a written review</h6>
-                {{ form.body }}
-            </div>
-            <div class="text-center">
-              <button type="submit" class="btn btn-dark btn-lg">Submit</button>
-            </div>
+                <div class="form-group mb-2">
+                    <h6>Add a rating</h6>
+                    <p class="star-rating">
+                        <span>{{ form.rating }}</span>
+                        <i class="rev-star rev-star-1" data-star="1"></i>
+                        <i class="rev-star rev-star-2" data-star="2"></i>
+                        <i class="rev-star rev-star-3" data-star="3"></i>
+                        <i class="rev-star rev-star-4" data-star="4"></i>
+                        <i class="rev-star rev-star-5" data-star="5"></i>
+                    </p>
+                </div>
+                <div class="form-group mb-4">
+                    <h6>Add a headline</h6>
+                    {{ form.title }}
+                </div>
+                <div class="form-group mb-4">
+                    <h6>Add your name</h6>
+                    {{ form.name }}
+                </div>
+                <div class="form-group mb-4">
+                    <h6>Add a written review</h6>
+                    {{ form.body }}
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-dark btn-lg">Submit</button>
+                </div>
             </form>
         </div>
     </div>
 </div>
 
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+{% include 'reviews/includes/review-star-script.html' %}
 {% endblock %}

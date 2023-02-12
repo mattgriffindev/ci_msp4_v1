@@ -9,9 +9,24 @@ from django.contrib.auth.decorators import login_required
 def reviews(request):
 
     reviews = Review.objects.all()
+    sort = None
+    direction = None
+
+    if request.GET:
+        if 'sort' in request.GET:
+            sortkey = request.GET['sort']
+            sort = sortkey
+            if 'direction' in request.GET:
+                direction = request.GET['direction']
+                if direction == 'desc':
+                    sortkey = f'-{sortkey}'
+            reviews = reviews.order_by(sortkey)
+
+    current_sorting = f'{sort}_{direction}'
 
     context = {
         'reviews': reviews,
+        'current_sorting': current_sorting,
     }
 
     return render(request, 'reviews/reviews.html', context)
@@ -23,12 +38,14 @@ def add_review(request, id):
     form = ReviewForm(request.POST or None)
 
     if form.is_valid():
+        rating = request.POST.get('rating')
         name = request.POST.get('name')
         title = request.POST.get('title')
         body = request.POST.get('body')
-        review = Review(name=name, title=title, body=body, product=product)
+        review = Review(rating=rating, name=name, title=title, body=body, product=product)
         review.save()
-        messages.success(request, 'Successfully added a review!')
+        messages.info(request, 'You have successfully added a review!')
+        return redirect(reverse('product_detail', args=[product.id]))
 
     template = 'reviews/add_review.html'
     form = ReviewForm()

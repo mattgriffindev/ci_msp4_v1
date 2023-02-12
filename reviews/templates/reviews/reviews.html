@@ -12,49 +12,86 @@
 {% endblock %}
 
 {% block content %}
-<div class="container-fluid">
-    <div class="row mt-3">
-        <div class="col-12 text-center">
-            <p class="lead">All reviews</p>
+<div class="container-fluid py-2 px-0 px-lg-5">
+    <div class="row pt-3">
+        <div class="col-12 d-flex justify-content-center justify-content-md-end">
+            <div class="sort-select-wrapper d-flex justify-content-center justify-content-md-end w-50">
+                <select id="sort-selector" class="custom-select custom-select-sm border-0">
+                    <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
+                    <option value="rating_asc" {% if current_sorting == 'rating_asc' %}selected{% endif %}>Rating (low
+                        to
+                        high)</option>
+                    <option value="rating_desc" {% if current_sorting == 'rating_desc' %}selected{% endif %}>Rating
+                        (high
+                        to low)</option>
+                </select>
+            </div>
         </div>
-        <div class="row px-5 ">
-            {% if reviews %}
-            {% for review in reviews %}
-            <div class="col-12 col-md-8 offset-md-2">
-                <div class="card mb-3">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img src="{{ review.product.image1.url }}" class="img-fluid rounded-start"
-                                alt="{{ review.product.name }}">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <p><strong>{{ review.product.name }}</strong></p>
-                                <h5 class="card-title">{{ review.title}}</h5>
-                                <p class="card-text"><small class="text-muted">
-                                        Created by
-                                        {% if review.name %}
-                                        {{ review.name }}
-                                        {% else %}
-                                        anonymous
-                                        {% endif %}
-                                        on {{ review.created_on}}
-                                    </small></p>
-                                <p class="card-text">
-                                    {{ review.body }}
-                                </p>
-                                {% if request.user.is_superuser %}
-                                <a class="remove-item btn btn-sm btn-dark ms-1" href="">Remove</a>
+    </div>
+    <div class="row px-5 ">
+        {% if reviews %}
+        {% for review in reviews %}
+        <div class="col-12 col-md-6 offset-md-3">
+            <div class="card border-0">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="{{ review.product.image1.url }}" class="img-fluid" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ review.title}}</h5>
+                            {% include 'products/includes/star_rating.html' %}
+                            <p class="card-text small text-muted">
+                                Created by
+                                {% if review.name %}
+                                {{ review.name }}
+                                {% else %}
+                                anonymous
                                 {% endif %}
-                            </div>
+                                on {{ review.created_on}}
+                            </p>
+                            <p class="card-text">
+                                {{ review.body }}
+                            </p>
+                            {% if request.user.is_superuser %}
+                            <a class="remove-item btn btn-sm btn-dark ms-1" href="{% url 'delete_review' review.id %}"
+                                onclick="deleteReview(event)">Remove</a>
+                            {% endif %}
                         </div>
                     </div>
                 </div>
             </div>
-            {% endfor %}
-            {% endif %}
         </div>
+        <hr class="w-50 offset-md-3">
+        {% endfor %}
+        {% endif %}
     </div>
 </div>
 
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+<script type="text/javascript">
+    $('#sort-selector').change(function () {
+        var selector = $(this);
+        var currentUrl = new URL(window.location);
+
+        var selectedVal = selector.val();
+        if (selectedVal != "reset") {
+            var sort = selectedVal.split("_")[0];
+            var direction = selectedVal.split("_")[1];
+
+            currentUrl.searchParams.set("sort", sort);
+            currentUrl.searchParams.set("direction", direction);
+
+            window.location.replace(currentUrl);
+        } else {
+            currentUrl.searchParams.delete("sort");
+            currentUrl.searchParams.delete("direction");
+
+            window.location.replace(currentUrl);
+        }
+    });
+</script>
 {% endblock %}
