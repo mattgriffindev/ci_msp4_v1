@@ -40,7 +40,7 @@
         <div class="col-12 col-md-6 col-lg-5">
             <div class="product-details-container mb-5 mt-md-5">
                 <p class="mb-0">{{ product.name }}</p>
-                {% if product.on_sale %}
+                {% if product.sale_price %}
                 <span class="badge badge-sale bg-danger">Sale</span>
                 <p><span
                         class="mb-0 text-left text-danger text-decoration-line-through">£{{ product.price }}</span>&nbsp;
@@ -55,12 +55,11 @@
                     </a>
                 </p>
                 {% endif %}
-                {% if product.rating %}
-                <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
-                {% else %}
-                <small class="text-muted">No Rating</small>
-                {% endif %}
-                <a href="#customer-reviews"><small class="text-muted">Read Customer Reviews</small></a>
+                <div class="my-2">
+                    {% include 'products/includes/avg_star_rating.html' %}
+                    <br>
+                    <a href="#customer-reviews" class="pt-1 text-muted">Read Customer Reviews</a>
+                </div>
                 {% if request.user.is_superuser %}
                 <span class="d-flex justify-content-start mt-3">
                     <a class="update-link btn btn-sm btn-light me-1" href="{% url 'edit_product' product.id %}">Edit</a>
@@ -130,18 +129,19 @@
         {% if reviews %}
         {% for review in reviews %}
         <div class="col-sm-12 col-md-4">
-            <div class="card">
+            <div class="card border-0">
                 <div class="card-body">
                     <h5 class="card-title">{{ review.title}}</h5>
-                    <p class="card-text"><small class="text-muted">
-                            Created by
-                            {% if review.name %}
-                            {{ review.name }}
-                            {% else %}
-                            anonymous
-                            {% endif %}
-                            on {{ review.created_on}}
-                        </small></p>
+                    {% include 'products/includes/star_rating.html' %}
+                    <p class="card-text small text-muted">
+                        Created by
+                        {% if review.name %}
+                        {{ review.name }}
+                        {% else %}
+                        anonymous
+                        {% endif %}
+                        on {{ review.created_on}}
+                </p>
                     <p class="card-text">
                         {{ review.body }}
                     </p>
@@ -173,15 +173,6 @@
         return true;
         else
         return false ;
-    };
-
-    function deleteReview(e) {
-        var agree=confirm("You are about to permanently delete this review.\nAre you sure you wish to continue?");
-        if (agree)
-        return true;
-        else
-        return false ;
-    };
+    };  
 </script>
-
 {% endblock %}

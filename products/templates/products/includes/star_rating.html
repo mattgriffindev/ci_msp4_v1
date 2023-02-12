@@ -1,0 +1,49 @@
+{% if review.rating == 1 %}
+<p class="star-rating">
+    <i class="my-star star-1 is-active" data-star="1"></i>
+    <i class="my-star star-2" data-star="2"></i>
+    <i class="my-star star-3" data-star="3"></i>
+    <i class="my-star star-4" data-star="4"></i>
+    <i class="my-star star-5" data-star="5"></i>
+</p>
+{% elif review.rating == 2 %}
+<p class="star-rating">
+    <i class="my-star star-1 is-active" data-star="1"></i>
+    <i class="my-star star-2 is-active" data-star="2"></i>
+    <i class="my-star star-3" data-star="3"></i>
+    <i class="my-star star-4" data-star="4"></i>
+    <i class="my-star star-5" data-star="5"></i>
+</p>
+{% elif review.rating == 3 %}
+<p class="star-rating">
+    <i class="my-star star-1 is-active" data-star="1"></i>
+    <i class="my-star star-2 is-active" data-star="2"></i>
+    <i class="my-star star-3 is-active" data-star="3"></i>
+    <i class="my-star star-4" data-star="4"></i>
+    <i class="my-star star-5" data-star="5"></i>
+</p>
+{% elif review.rating == 4 %}
+<p class="star-rating">
+    <i class="my-star star-1 is-active" data-star="1"></i>
+    <i class="my-star star-2 is-active" data-star="2"></i>
+    <i class="my-star star-3 is-active" data-star="3"></i>
+    <i class="my-star star-4 is-active" data-star="4"></i>
+    <i class="my-star star-5" data-star="5"></i>
+</p>
+{% elif review.rating == 5 %}
+<p class="star-rating">
+    <i class="my-star star-1 is-active" data-star="1"></i>
+    <i class="my-star star-2 is-active" data-star="2"></i>
+    <i class="my-star star-3 is-active" data-star="3"></i>
+    <i class="my-star star-4 is-active" data-star="4"></i>
+    <i class="my-star star-5 is-active" data-star="5"></i>
+</p>
+{% else %}
+<p class="star-rating">
+    <i class="my-star star-1" data-star="1"></i>
+    <i class="my-star star-2" data-star="2"></i>
+    <i class="my-star star-3" data-star="3"></i>
+    <i class="my-star star-4" data-star="4"></i>
+    <i class="my-star star-5" data-star="5"></i>
+</p>
+{% endif %}

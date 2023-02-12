@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from django.db.models import Q
+from django.db.models import Q, Avg
 from django.db.models.functions import Lower
 from .models import Product, Category
 from .forms import ProductForm
@@ -40,7 +40,7 @@ def all_products(request):
             categories = Category.objects.filter(name__in=categories)
 
         if 'sale' in request.GET:
-            products = Product.objects.filter(on_sale=True)
+            products = Product.objects.filter(sale_price__isnull=False)
 
         if 'q' in request.GET:
             query = request.GET['q']
@@ -68,10 +68,12 @@ def product_detail(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
     reviews = Review.objects.filter(product_id=product_id)
+    avgRating = Review.objects.filter(product_id=product_id).aggregate(Avg('rating')).get('rating__avg', 0.00)
 
     context = {
         'product': product,
         'reviews': reviews,
+        'avgRating': avgRating,
     }
 
     return render(request, 'products/product_detail.html', context)
