@@ -62,6 +62,13 @@
                             {% endif %}
                                 <img class="card-img-top img-fluid" src="{{ product.image1.url }}" alt="{{ product.name }}">
                         </a>
+                        {% if product.sale_price %}
+                        <p><span
+                                class="mb-0 text-left text-danger text-decoration-line-through">£{{ product.price }}</span>&nbsp;
+                            <span class="lead mb-0 text-left font-weight-bold">£{{ product.sale_price }}</span></p>
+                        {% else %}
+                        <p class="lead mb-0 text-left font-weight-bold">£{{ product.price }}</p>
+                        {% endif %}
                         {% else %}
                         <a href="{% url 'product_detail' product.id %}" aria-label="Link to product detail">
                             {% if product.sale_price %}

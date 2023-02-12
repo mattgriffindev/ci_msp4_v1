@@ -16,6 +16,9 @@
     <div class="row">
         <div class="col-12 col-md-6 col-lg-4 offset-lg-1">
             <div class="image-container mt-5">
+                {% if product.sale_price %}
+                <span class="badge badge-sale bg-danger">Sale</span>
+                {% endif %}
                 {% if product.image1 %}
                 <a href="" target="_blank">
                     <img id="product-img" class="card-img-top img-fluid" src="{{ product.image1.url }}"
@@ -41,9 +44,7 @@
             <div class="product-details-container mb-5 mt-md-5">
                 <p class="mb-0">{{ product.name }}</p>
                 {% if product.sale_price %}
-                <span class="badge badge-sale bg-danger">Sale</span>
-                <p><span
-                        class="mb-0 text-left text-danger text-decoration-line-through">£{{ product.price }}</span>&nbsp;
+                <p><span class="mb-0 text-left text-danger text-decoration-line-through">£{{ product.price }}</span> &nbsp;
                     <span class="lead mb-0 text-left font-weight-bold">£{{ product.sale_price }}</span></p>
                 {% else %}
                 <p class="lead mb-0 text-left font-weight-bold">£{{ product.price }}</p>
