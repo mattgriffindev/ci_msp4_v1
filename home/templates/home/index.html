@@ -6,45 +6,37 @@
 
 <!--hero-->
 {% block page_header %}
-<div class="container-fluid hero-container ">
-  <div class="row grid-row">
-    <div class="col-12 col-md-4 grid-col">
-      <div class="img-wrapper">
-        <a href="{% url 'products' %}?category=dining_tableware,glassware,kitchenware">
-          <img src="{{ MEDIA_URL }}hero1.webp" class="img img-fluid" alt="...">
-          <div class="img-middle">
-            <div class="img-text">Kitchenware & Dining</div>
-          </div>
-        </a>
-      </div>
-    </div>
-    <div class="col-12 col-md-4 grid-col">
-      <div class="img-wrapper">
-        <a href="{% url 'products' %}?category=mirrors,wall_art,canvas_prints">
-          <img src="{{ MEDIA_URL }}hero2.webp" class="img img-fluid" alt="...">
-          <div class="img-middle">
-            <div class="img-text">Wall Art & Clocks</div>
-          </div>
-        </a>
-      </div>
-    </div>
-    <div class="col-12 col-md-4 grid-col">
-      <div class="img-wrapper">
-        <a
-          href="{% url 'products' %}?category=candleholders_lanterns,decorative_bowls_platters,soft_furnishings,sculptures_decorative_objects">
-          <img src="{{ MEDIA_URL }}hero3.webp" class="img img-fluid" alt="...">
-          <div class="img-middle">
-            <div class="img-text">Home Decor</div>
-          </div>
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
+
 {% endblock %}
 <!--/hero-->
 
 {% block content %}
+<div class="container-fluid hero-container px-0 mb-5">
+  <div class="row">
+    <div id="photo">
+      <div class="img-wrapper">
+        <img src="{{ MEDIA_URL }}hero1.webp" style="height:350px;">
+      </div>
+      <div class="img-wrapper">
+        <img src="{{ MEDIA_URL }}hero5.jpg" style="height:350px;">
+      </div>
+      <div class="img-wrapper">
+        <img src="{{ MEDIA_URL }}hero4.jpg" style="height:450px;">
+      </div>
+      <div class="img-wrapper">
+        <img src="{{ MEDIA_URL }}hero6.webp" style="height:250px;">
+      </div>
+      <div class="img-wrapper">
+        <img src="{{ MEDIA_URL }}hero3.webp" style="height:350px;">
+      </div>
+      <div class="img-wrapper">
+        <img src="{{ MEDIA_URL }}hero2.webp" style="height:350px;">
+      </div>
+    </div>
+  </div>
+</div>
+
+
 <div class="container-fluid mt-4">
   <div class="row">
     <div class="col-10 offset-1">
@@ -57,14 +49,14 @@
           <div class="card h-100 border-0">
             {% if product.image1.url %}
             <a href="{% url 'product_detail' product.id %}" class="border">
-              {% if product.on_sale %}
+              {% if product.sale_price %}
               <span class="badge badge-sale-sm bg-danger">Sale</span>
               {% endif %}
               <img class="img-fluid" src="{{ product.image1.url }}" alt="{{ product.name }}">
             </a>
             {% else %}
             <a href="{% url 'product_detail' product.id %}">
-              {% if product.on_sale%}
+              {% if product.sale_price%}
               <span class="badge badge-sale-sm bg-danger">Sale</span>
               {% endif %}
               <img class="img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
@@ -76,7 +68,7 @@
             <div class="card-footer bg-white pt-0 border-0 text-left">
               <div class="row">
                 <div class="col">
-                  {% if product.on_sale %}
+                  {% if product.sale_price %}
                   <p><span
                       class="mb-0 text-left text-danger text-decoration-line-through">£{{ product.price }}</span>&nbsp;
                     <span class="lead mb-0 text-left font-weight-bold">£{{ product.sale_price }}</span></p>
@@ -96,25 +88,62 @@
           </div>
         </div>
         {% if forloop.counter|divisibleby:1 %}
-        <div class="col-12 d-sm-none mb-5">
+        <div class="col-12 d-sm-none mb-2">
           <hr>
         </div>
         {% endif %}
         {% if forloop.counter|divisibleby:2 %}
-        <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
+        <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-2">
           <hr>
         </div>
         {% endif %}
         {% if forloop.counter|divisibleby:3 %}
-        <div class="col-12 d-none d-lg-block d-xl-none mb-5">
+        <div class="col-12 d-none d-lg-block d-xl-none mb-2">
           <hr>
         </div>
         {% endif %}
         {% if forloop.counter|divisibleby:4 %}
-        <div class="col-12 d-none d-xl-block mb-5">
+        <div class="col-12 d-none d-xl-block mb-2">
           <hr>
         </div>
         {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid mt-4">
+  <div class="row">
+    <div class="col-10 offset-1">
+      <div class="row text-center mt-1 mb-3">
+        <h3>Customer Reviews</h3>
+        <p><a class="text-muted" href="{% url 'reviews' %}">Read all reviews</a></p>
+      </div>
+      <div class="row">
+        {% for review in reviews %}
+        <div class="col-sm-12 col-md-4">
+            <div class="card border-0">
+                <div class="card-body">
+                    <h5 class="card-title">{{ review.title}}</h5>
+                    {% include 'products/includes/star_rating.html' %}
+                    <p class="card-text small text-muted">
+                        Created by
+                        {% if review.name %}
+                        {{ review.name }}
+                        {% else %}
+                        anonymous
+                        {% endif %}
+                        on {{ review.created_on}}
+                </p>
+                    <p class="card-text">
+                        {{ review.body }}
+                    </p>
+                    {% if request.user.is_superuser %}
+                    <a class="remove-item btn btn-sm btn-dark ms-1" href="{% url 'delete_review' review.id %}" onclick="deleteReview(event)">Remove</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
         {% endfor %}
       </div>
     </div>

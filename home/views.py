@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from products.models import Product
+from reviews.models import Review
 
 # Create your views here.
 
@@ -7,10 +8,12 @@ from products.models import Product
 def index(request):
     """ return index page """
 
-    products = Product.objects.filter(on_sale=True)[:4]
+    products = Product.objects.filter(featured=True)[:4]
+    reviews = Review.objects.all().order_by('-created_on').values()[:3]
 
     context = {
         'products': products,
+        'reviews': reviews,
     }
     return render(request, 'home/index.html', context)
 
