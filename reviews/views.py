@@ -32,7 +32,12 @@ def reviews(request):
     return render(request, 'reviews/reviews.html', context)
 
 
+@login_required
 def add_review(request, id):
+    if not request.user:
+        messages.error(request, 'Sorry, you need to log in do that.')
+        return redirect(reverse('home'))
+
     reviews = Review.objects.all()
     product = Product.objects.get(id=id)
     form = ReviewForm(request.POST or None)
