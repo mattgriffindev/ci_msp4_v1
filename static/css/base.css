@@ -140,30 +140,28 @@ li,
 
 /*----------------------------------------------------------------------hero-*/
 
-.hero-container {
-	background-color: var(--light-color);
-}
 
-.hero-container .img-fluid {
+
+/* .hero-container .img-fluid {
 	height: 100%;
 	width: 100%;
 	display: none;
 	object-fit: cover;
-}
+} */
 
-.img-wrapper {
+/* .img-wrapper {
 	height: 28rem;
 	width: 100%;
 	position: relative;
 	margin-top: 8px;
     overflow: hidden;
-}
+} */
 
-.grid-col {
+/* .grid-col {
 	padding: 0 4px;
-}
+} */
 
-.fade-in {
+/* .fade-in {
 	animation: fade-in 1s ease-in-out forwards;
 }
 
@@ -206,7 +204,7 @@ li,
 .hero-container .img-text {
 	color: var(--dark-color);
 	font-size: 2rem;
-  }
+  } */
 
 /*--------------------------------------------------------------------footer-*/
 
@@ -327,6 +325,43 @@ li,
 	cursor: pointer;
 }
 
+/*--------------------------------------------------------------------reviews-*/
+
+/*Adapted from https://medium.com/geekculture/how-to-build-a-simple-star-rating-system-abcbb5117365*/
+/*set the default color of the stars*/
+.star-rating {
+	margin-top: 0;
+	margin-bottom: 0;
+	color: #bebebe;
+	font-size: 1.75rem;
+}
+
+.rev-star {
+	font-size: 2.5rem;
+}
+
+/*create the star*/
+.my-star::before,
+.rev-star::before {
+	content: "\002605";
+}
+
+/*remove the default style (italic) of the star*/
+.my-star,
+.rev-star {
+	font-style: unset !important;
+}
+
+/*set active star color*/
+.is-active {
+	color: #fb8900;
+}
+
+/*set color on hover*/
+.rev-star:not(.is-active):hover {
+	color: #fb8900;
+}
+
 /*------------------------------------------------------------------------bag-*/
 
 .hr-bag{
@@ -444,6 +479,9 @@ li,
 
 /*-small-*/
 @media (max-width: 488px) {
+	#photo {
+		column-count: 1;
+	}
 	.img-wrapper {
 		height: 10rem;
 	}
@@ -451,12 +489,48 @@ li,
 
 /*-medium-*/
 @media (min-width: 768px) {
+	#photo {
+		column-count: 2;
+	}
 	.w-md-25 {
 		width: 25% !important;
 	}
-
 	.w-md-50 {
 		width: 50% !important;
 	}
 }
+
+/*-large-*/
+@media (min-width: 992px) {
+	#photo {
+		column-count: 3;
+	}
+}
  
+
+.hero-container {
+	background-color: black;
+	/* max-height: 55rem; */
+}
+
+#photo {
+    clear: both;
+    column-gap: 4px;
+}
+
+#photo img {
+    width: 100%;
+	margin-top: 4px;
+	transition: transform 2s;
+	object-fit: cover;
+}
+
+#photo img:hover {
+	transform: scale(1.2);
+}
+
+
+.img-wrapper {
+	overflow: hidden;
+}
+
