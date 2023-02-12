@@ -10,6 +10,7 @@
     .then(
         function(response) {
             console.log("SUCCESS", response);
+            messages.success(request, 'Your message has been sent.')
         },
         function(error) {
             console.log("FAILED", error);

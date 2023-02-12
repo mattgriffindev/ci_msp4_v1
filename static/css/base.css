@@ -149,6 +149,8 @@ li,
 
 .carousel-item-inner-text {
 	position: absolute;
+	width: 50%;
+	background-color: pink;
 }
 
 /*--------------------------------------------------------------------footer-*/
