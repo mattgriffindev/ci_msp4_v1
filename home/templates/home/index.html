@@ -127,7 +127,8 @@
         <div class="col-sm-12 col-md-4">
             <div class="card border-0">
                 <div class="card-body">
-                    <h5 class="card-title">{{ review.title}}</h5>
+                    <h5 class="card-title">"{{ review.title}}"</h5>
+                    <h6>{{ review.product.name }}</h6>
                     {% include 'products/includes/star_rating.html' %}
                     <p class="card-text small text-muted">
                         Created by
