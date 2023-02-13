@@ -180,15 +180,15 @@ The site is designed to be responsive on all devices.
 
 **W3C markup validator**
 
-The [W3C Markup Validator](https://validator.w3.org/ "W3C Markup Validator") was used to to validate the site's HTML. The Validator returned 1 info, 4 warnings and 13 errors. These were all resolved.
+The [W3C Markup Validator](https://validator.w3.org/ "W3C Markup Validator") was used to to validate the site's HTML.
 
-A copy of the original report can be accessed [here](/ci_msp4/docs/tests/html-validator-1.pdf "W3C Markup Validator report").
-
-A copy of the final report can be accessed [here](/ci_msp4/docs/tests/html-validator-2.pdf "W3C Markup Validator report").
+Copies of the reports for each page can be accessed [here](/ci_msp4/docs/tests/html_validator/ "W3C Markup Validator report").
 
 **W3C CSS validator**
 
-The [W3C CSS Validator](https://jigsaw.w3.org/css-validator/ "W3C CSS Validator") was used to validate the site's CSS. The Validator returned 16 errors and 1,091 warnings; however, these were all related to Bootstrap CSS, vendor extensions, vendor extended pseudo-elements, and vendor extended pseudo-classes, so were ignored.
+The [W3C CSS Validator](https://jigsaw.w3.org/css-validator/ "W3C CSS Validator") was used to validate the site's CSS. Warnings related to Bootstrap CSS, vendor extensions, vendor extended pseudo-elements, and vendor extended pseudo-classes were ignored.
+
+Copies of the reports for each page can be accessed [here](/ci_msp4/docs/tests/css_validator/ "W3C CSS Validator reports").
 
 **Lighthouse testing**
 
