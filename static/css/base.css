@@ -66,6 +66,13 @@ li,
 	border-radius: 50px !important;
 }
 
+.btn-white {
+	color: var(--white) !important;
+	background-color: transparent !important;
+	border: 1px solid var(--white) !important;
+	border-radius: 50px !important;
+}
+
 /* page header */
 .page-title-container {
 	color: var(--white);
@@ -140,9 +147,8 @@ li,
 
 /*----------------------------------------------------------------------hero-*/
 
-
 .carousel-img {
-	height: 30rem;
+	height: 28rem;
 	width: 100%;
 	object-fit: cover;
 	object-position: 50% 50%;
@@ -150,8 +156,19 @@ li,
 
 .carousel-item-inner-text {
 	position: absolute;
-	width: 50%;
-	background-color: pink;
+	width: 40%;
+	top: 5rem;
+	left: 1rem;
+	background-color: var(--dark-color);
+	opacity: 85%;
+}
+
+.carousel-item-inner-text h2 {
+	font-family: var(--brand-font);
+}
+
+.hero-highlight {
+	color: var(--brand-color);
 }
 
 /*--------------------------------------------------------------------footer-*/
