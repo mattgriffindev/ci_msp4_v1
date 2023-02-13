@@ -60,8 +60,9 @@
                                             </button>
                                         </div>
                                         <input class="form-control form-control-sm qty_input" type="number"
-                                            name="quantity" value="{{ item.quantity }}" min="0" max="99"
-                                            data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}">
+                                        name="quantity" value="{{ item.quantity }}" min="1" max="99"
+                                        data-item_id="{{ item.item_id }}"
+                                        id="id_qty_{{ item.item_id }}">
                                         <div class="input-group-append">
                                             <button class="increment-qty btn btn-sm" data-item_id="{{ item.item_id }}"
                                                 id="increment-qty_{{ item.item_id }}">
@@ -137,26 +138,22 @@
 
 <script>
     // Update quantity on click
-    $('.update-link').click(function (e) {
+    $('.update-link').click(function(e) {
         var form = $(this).prev('.update-form');
         form.submit();
     })
 
     // Remove item and reload on click
-    $('.remove-item').click(function (e) {
+    $('.remove-item').click(function(e) {
         var csrfToken = "{{ csrf_token }}";
         var itemId = $(this).attr('id').split('remove_')[1];
         var url = `/bag/remove/${itemId}/`;
-        var data = {
-            'csrfmiddlewaretoken': csrfToken,
-            'item_id': itemId
-        };
+        var data = {'csrfmiddlewaretoken': csrfToken};
 
         $.post(url, data)
-            .done(function () {
-                location.reload();
-            });
+         .done(function() {
+             location.reload();
+         });
     })
 </script>
-
 {% endblock %}

@@ -1,22 +1,53 @@
 <!--Adapted from Code Institute-->
 <script>
     function sendMail(contactForm) {
-    emailjs.send("service_l0dqag3","template_30ofgfw", {
-        "from_name": contactForm.name.value,
-        "from_email": contactForm.email.value,
-        "from_phone": contactForm.phone.value,
-        "message": contactForm.message.value
-    })
-    .then(
-        function(response) {
-            console.log("SUCCESS", response);
-            alert("Your message has been sent successfully");
-            location.reload();
-        },
-        function(error) {
-            console.log("FAILED", error);
-        }
-    );
-    return false;
-}
+        emailjs.send("service_l0dqag3", "template_30ofgfw", {
+                "from_name": contactForm.name.value,
+                "from_email": contactForm.email.value,
+                "from_phone": contactForm.phone.value,
+                "message": contactForm.message.value
+            })
+            .then(
+                function (response) {
+                    console.log("SUCCESS", response);
+                    // alert("Your message has been sent successfully");
+
+                    $(document).ready(function () {
+                        $("#myModal").modal("show");
+                    });
+
+                },
+                function (error) {
+                    console.log("FAILED", error);
+                }
+            );
+        return false;
+    }
+
+    $(document).ready(function () {
+        $("#clearContactForm").click(function () {
+            history.go(0);
+        });
+    });
 </script>
+
+<!--modal-->
+<div class="modal" id="myModal" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="material-icons-outlined">
+                    check_circle
+                </span>
+                <h5 class="modal-title" id="staticBackdropLabel">&nbsp;Success!</h5>
+                <button type="button" id="clearContactForm" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Your message has been sent!</p>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+<!--/modal-->

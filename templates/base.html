@@ -133,7 +133,7 @@
     aria-labelledby="staticBackdropLabel" aria-hidden="true">
     {% for message in messages %}
     {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}
-    {% include 'includes/alerts/alert_error.html' %}
+    {% include '/includes/alerts/alert_error.html' %}
     {% endif %}
     {% if message.level == DEFAULT_MESSAGE_LEVELS.INFO %}
     {% include 'includes/alerts/alert_info.html' %}
@@ -155,6 +155,11 @@
   {% endblock %}
 
   {% block postloadjs %}
+  <script>
+    $(document).ready(function(){
+      $("#staticBackdrop").modal("show");
+    });
+  </script>
   {% endblock %}
 
   <!--footer-->
