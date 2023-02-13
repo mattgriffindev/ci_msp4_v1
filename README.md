@@ -6,9 +6,17 @@ The site uses HTML5, CSS3, JavaScript, Python, Django, and ElephantSQL.
 
 [View the live site here](https://cimsp4v1.herokuapp.com/ "Paul Reed")
 
-## **1. User experience**
+## Contents
 
-### User stories
+1. [Project Objectives](#1-project-objectives)
+2. [User Experience](#2-user-experience)
+3. [Features](#3-features)
+4. [Technologies Used](#4-technologies-used)
+5. [Testing](#5-testing)
+6. [Deployment](#6-deployment)
+7. [Credits](#7-credits)
+
+## **1. Project objectives
 
 **As a user, I want to...**
 
@@ -17,11 +25,12 @@ The site uses HTML5, CSS3, JavaScript, Python, Django, and ElephantSQL.
   3. View items without having to create an account
   4. View and sort items by category and price
   5. Purchase items without having to create an account
-  6. Register for an account if I choose to
-  7. Find the site's contact details, including social media links, and be able to contact the site
-  8. Log in to my account (returning user)
-  9. Share reviews of items I have purchased (returning user)
-  10. View my previous orders (returning user)
+  6. Update and remove items from my bag
+  7. Register for an account if I choose to
+  8. Find the site's contact details, including social media links, and be able to contact the site
+  9. Log in to my account (returning user)
+  10. Share reviews of items I have purchased (returning user)
+  11. View my previous orders (returning user)
 
 **As a superuser, I want to...**
 
@@ -29,70 +38,7 @@ The site uses HTML5, CSS3, JavaScript, Python, Django, and ElephantSQL.
   2. Add, edit, and delete items
   3. Delete user reviews
 
-**How this is achieved**
-
-**Design**
-
-The site uses a simple and consistent layout and design.
-
-**Navigation**
-
-Users can access different categories and sub-categories of itmes from the navbar.
-
-> ![navbar](/ci_msp4/docs/navbar.webp)
-
-User can access categories by hovering over the hero images.
-
-> ![hero-image](/ci_msp4/docs/hero-image.webp)
-
-**Items**
-
-Users can add a review for individual items.
-
-> ![add-review](/ci_msp4/docs/add-review.webp)
-
-Users can access items without having to register or login.
-Registered users can view their previous orders on their profile page.
-
-> ![profile recipes](cakebox/static/img/profile-recipes.png)
-
-**Register, Login, and Logout**
-
-Users can login or register using the buttons in the navbar. 
-
-> ![login-register](/ci_msp4/docs/login-register.webp)
-
-Users can register for an account easily.
-
-> ![signup](/ci_msp4/docs/signup.webp)
- 
-Users can login to their account easily.
-
-> ![sign-in](/ci_msp4/docs/sign-in.webp)
-
-Users can logout of their account from the navbar.
-
-> ![logout](/ci_msp4/docs/logout.webp)
-
-**Defensive programming**
-   
-Some actions can only be performed by superusers.
-
-Superusers can add items.
-
-> ![add-product](/ci_msp4/docs/add-product.webp)
-
-Superusers can edit items.
-
-> ![edit-product](/ci_msp4/docs/edit-product.webp)
-
-Superusers can delete items.
-
-> ![delete-product](/ci_msp4/docs/delete-product.webp)
-
-Superusers will get an alert asking them if they are sure they want to delete the item.
-
-> ![confirm-delete](/ci_msp4/docs/confirm-delete.webp)
+## **2. User experience**
 
 **Colour scheme**
 
@@ -136,11 +82,11 @@ The site uses a relationship database. ElephantSQL manages the SQL data for the 
 
 > ![db-scheme](/ci_msp4/docs/db-scheme.webp)
 
-## **2. Features**
+## **3. Features**
 
 The site is designed to be responsive on all devices.
 
-## **3. Technologies used**
+## **4. Technologies used**
 
 **Languages used**
 
@@ -176,7 +122,7 @@ The site is designed to be responsive on all devices.
 
 - [Balsamiq](https://balsamiq.com/ "Balsamiq") was used to create the wireframes during the design process.
 
-## 4. Testing
+## 5. Testing
 
 **W3C markup validator**
 
@@ -222,6 +168,40 @@ The website's responsiveness was tested manually, using the Google Chrome DevToo
 
 The website was responsive on all screen sizes from 320x480px to 1920x1200px.
 
+**Jest Automated Testing**
+
+Automated tests were performed using the Jest testing framework.
+
+No issues were experienced.
+
+**Testing project objectives**
+
+Click on links to view supporting images.
+
+***User objectives***
+
+| Feature | Expected result | Actual result |
+| ----------- | ----------- | ----------- |
+| Understand the site's main purpose and find out more about what the site offers | Clear and relevant text and imagery on the landing page to let users know what the site offers  | As expected |
+| Navigate within the site to find relevant content | Easy to use navigation bar at the top of the page; Quick links in the page footer; clear buttons and links throughout the site | As expected<br> [Navbar](/ci_msp4/docs/navbar.webp "Navbar")<br> [Footer](/ci_msp4/docs/footer.webp "Footer")   |
+| View items without having to create an account | View all items by category from the navigation bar and open individual items to view details | As expected<br> [Category](/ci_msp4/docs/category.webp "Category") |
+| View and sort items by category and price | Sort items by category (A-Z and Z-A) and by price (low-high and high-low) using a simple dropdown box | As expected<br> [Sort](/ci_msp4/docs/sort.webp "Sort") |
+| Purchase items without having to create an account | Add items to bag and checkout as a guest | As expected |
+| Update and remove items from my bag | Change the quantity of items in the bag and remove items as needed |  |
+| Register for an account if I choose to | Register for an account and receive confirmation that an account has been created | As expected<br> [Signup](/ci_msp4/docs/signup.webp "signup") |
+| Find the site's contact details, including social media links, and be able to contact the site | Link to contact page with details and contact form with confirmation that message has been sent | As expected |
+| Log in to my account (returning user) | Log in to account and be directed to profile page | As expected<br> [Log in](/ci_msp4/docs/sign-in.webp "Log in") |
+| Share reviews of items I have purchased (returning user) | Create reviews for items when logged in to account | As expected<br> [Add review](/ci_msp4/docs/add-review.webp "Add review") |
+| View my previous orders (returning user) | View list of items purchased previously when logged in to account | As expected |
+
+***Superuser objectives***
+
+| Feature | Expected result | Actual result |
+| ----------- | ----------- | ----------- |
+| Log in to my account | Log in to account and be directed to profile page | As expected<br> [Log in](/ci_msp4/docs/sign-in.webp "Log in") |
+| Add, edit, and delete items | Add new items, edit existing items, and delete items | As expected<br>[Add item](/ci_msp4/docs/add-product.webp "Add item")<br> [Edit product](/ci_msp4/docs/edit-product.webp "Edit item")<br> [Delete item](/ci_msp4/docs/delete-product.webp "Delete product")<br> [Confirm delete](/ci_msp4/docs/confirm-delete.webp "Confirm delete") |
+| Delete user reviews | Delete user reviews as needed | As expected |
+
 **Known Bugs**
 
 - The email subscription form on the footer has no functionality at present
@@ -229,7 +209,7 @@ The website was responsive on all screen sizes from 320x480px to 1920x1200px.
 - The sort by price filter does not account for sale price
 - Image thumbnails on the product details page have no functionality at present
 
-## 5. Deployment
+## 6. Deployment
 
 **Deployment to Heroku**
 
@@ -246,7 +226,7 @@ The website was responsive on all screen sizes from 320x480px to 1920x1200px.
   9. Push all changes to the staging area.
   10. Push to heroku for your app to run and function.
 
-## 6. Credits
+## 7. Credits
 
 **Code**
 
