@@ -105,8 +105,16 @@
           <li class="list-inline-item">
             <a class="nav-link" href="{% url 'view_bag' %}" aria-label="view bag">
               <div class="text-center">
-                <div><span class="material-icons-outlined bag-icon">
-                    shopping_bag</span></div>
+                <div>
+                  <span class="material-icons-outlined bag-icon">
+                    shopping_bag
+                  </span>
+                  <span class="product_count d-inline-flex align-top">
+                      {% if grand_total %}
+                      <strong>{{ product_count }}</strong>
+                      {% endif %}
+                  </span>
+                </div>
               </div>
             </a>
           </li>
