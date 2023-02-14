@@ -205,9 +205,7 @@ Click on links to view supporting images.
 **Known Bugs**
 
 - The email subscription form on the footer has no functionality at present
-- Delivery information has not yet been added to the Product model
 - The sort by price filter does not account for sale price
-- Image thumbnails on the product details page have no functionality at present
 
 ## 6. Deployment
 

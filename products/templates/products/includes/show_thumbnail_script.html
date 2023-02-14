@@ -1,10 +1,20 @@
 <script type="text/javascript">
     // Show thumbnail images as main image
-    function thumbnail1() {
-        document.getElementById("product-img").src = "{{ product.image1.url }}";
-    }
+    document.getElementById("thumbnail1").addEventListener("click", function() {
+        document.getElementById("product-img").src = this.src;
+    });
 
-    function thumbnail2() {
-        document.getElementById("product-img").src = "{{ product.image2.url }}";
-    }
+    document.getElementById("thumbnail2").addEventListener("click", function() {
+        document.getElementById("product-img").src = this.src;
+    });
+
+    // Show thumbnail images as main image
+    // function thumbnail1() {
+    //     document.getElementById("product-img").src = "{{ product.image1.url }}";
+    // }
+
+    // function thumbnail2() {
+    //     document.getElementById("product-img").src = this.src;
+    //     }
+
 </script>
