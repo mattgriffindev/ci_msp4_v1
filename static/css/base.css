@@ -41,9 +41,7 @@ li,
 	background: var(--white);
 }
 
-.btt-link,
-.update-link,
-.remove-item {
+.btt-link {
 	cursor: pointer;
 }
 
